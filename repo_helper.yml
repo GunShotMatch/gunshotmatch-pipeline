@@ -1,0 +1,49 @@
+---
+modname: gunshotmatch-pipeline
+copyright_years: "2020-2023"
+author: "Dominic Davis-Foster"
+email: "dominic@davis-foster.co.uk"
+version: "0.0.0"
+username: "domdfcoding"
+license: 'MIT'
+short_desc: 'GunShotMatch Pipeline'
+
+enable_tests: false
+enable_docs: false
+enable_conda: false
+on_pypi: false
+use_whey: true
+
+python_versions:
+ 3.8:
+ 3.9:
+ "3.10":
+ "3.11":
+ "3.12":
+
+additional_ignore:
+ - trees
+ - output
+ - data
+
+# manifest_additional:
+#  - "include domdf_python_tools/google-10000-english-no-swears.txt"
+
+# intersphinx_mapping:
+#  - "'pandas': ('https://pandas.pydata.org/docs/', None)"
+#  - "'consolekit': ('https://consolekit.readthedocs.io/en/latest/', None)"
+#  - "'pytest': ('https://docs.pytest.org/en/stable', None)"
+#  - "'pytest-regressions': ('https://pytest-regressions.readthedocs.io/en/latest/', None)"
+
+# extra_sphinx_extensions:
+#  - sphinx_autofixture
+#  - sphinx_highlights
+#  - sphinx_toolbox.more_autosummary.column_widths
+#  - sphinx_toolbox.latex.succinct_seealso
+#  - latex_unicode
+
+# tox_unmanaged:
+#  - testenv
+
+# additional_ignore:
+#  - demo.py

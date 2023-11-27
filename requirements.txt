@@ -1,0 +1,7 @@
+domdf-python-tools>=3.7.0
+libgunshotmatch>=0.4.0
+numpy>=1.26.2
+pandas>=2.1.3
+pymassspec>=2.3.0
+pyms-nist-search>=0.6.3.post1
+sdjson>=0.4.0
