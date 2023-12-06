@@ -49,7 +49,7 @@ from pyms.Experiment import Experiment  # type: ignore[import]
 
 # this package
 from gunshotmatch_pipeline import prepare_datafile
-from gunshotmatch_pipeline.nist_ms_search import nist_ms_search_engine
+from gunshotmatch_pipeline.nist_ms_search import engine_on_demand
 from gunshotmatch_pipeline.projects import LoaderMixin
 from gunshotmatch_pipeline.utils import tomllib
 
@@ -189,15 +189,14 @@ def process_unknown(
 	method = unknown.load_method()
 	config = unknown.load_config()
 
-	# Initialise search engine.
-	with nist_ms_search_engine(config.pyms_nist_search) as search:
+	gsmp_filename = output_dir / f"{unknown.name}.gsmp"
+	# print(gsmp_filename)
+	if gsmp_filename.exists() and not recreate:
+		print("Loading Project from file", gsmp_filename)
+		project = Project.from_file(gsmp_filename)
+	else:
 
-		gsmp_filename = output_dir / f"{unknown.name}.gsmp"
-		# print(gsmp_filename)
-		if gsmp_filename.exists() and not recreate:
-			print("Loading Project from file", gsmp_filename)
-			project = Project.from_file(gsmp_filename)
-		else:
+		with engine_on_demand(config.pyms_nist_search) as search:
 
 			gsmr_filename = (output_dir / unknown.datafile).with_suffix(".gsmr")
 			# print(gsmr_filename)
@@ -208,10 +207,11 @@ def process_unknown(
 			else:
 				print("\nParsing", unknown.datafile_path)
 				repeat, gcms_data = prepare_datafile(unknown.datafile_path, method)
-				filter_and_identify_peaks(repeat, method, engine=search)
+				filter_and_identify_peaks(repeat, method, engine=search.engine)
 				repeat.export(output_dir)
 
 			alignment = exprl2alignment([Experiment(repeat.name, repeat.peaks)])[0]
+
 			project = Project(name=unknown.name, alignment=alignment, datafile_data={repeat.name: repeat})
 
 			if not project.consolidated_peaks:
@@ -223,14 +223,14 @@ def process_unknown(
 						min_appearances=1,  # verbose=True,
 						)
 
-			ms_comparison_df = project.consolidate(search, cp_filter)
-			# assert project.consolidated_peaks is not None
-			# print(len(project.consolidated_peaks))
+			ms_comparison_df = project.consolidate(search.engine, cp_filter)
+		# assert project.consolidated_peaks is not None
+		# print(len(project.consolidated_peaks))
 
-			# print(ms_comparison_df)
+		# print(ms_comparison_df)
 
-			# export_filename = project.export(output_dir)
-			export_filename = project.export(output_dir)
-			print(f"Project saved to {export_filename!r}")
+		# export_filename = project.export(output_dir)
+		export_filename = project.export(output_dir)
+		print(f"Project saved to {export_filename!r}")
 
-		return project
+	return project

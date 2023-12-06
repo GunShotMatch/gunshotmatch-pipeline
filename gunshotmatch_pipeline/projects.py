@@ -46,7 +46,7 @@ from libgunshotmatch.utils import _fix_init_annotations
 # this package
 from gunshotmatch_pipeline import prepare_datafile, project_from_repeats
 from gunshotmatch_pipeline.config import Configuration
-from gunshotmatch_pipeline.nist_ms_search import nist_ms_search_engine
+from gunshotmatch_pipeline.nist_ms_search import engine_on_demand
 from gunshotmatch_pipeline.utils import tomllib
 
 __all__ = ("GlobalSettings", "LoaderMixin", "ProjectSettings", "Projects", "process_projects")
@@ -341,15 +341,15 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 	else:
 		raise ValueError("'process_projects' requires all projects to have common configuration.")
 
-	# Initialise search engine.
-	with nist_ms_search_engine(config.pyms_nist_search) as search:
+	for project_settings in projects.iter_project_settings():
+		gsmp_filename = output_dir / f"{project_settings.name}.gsmp"
+		if gsmp_filename.exists() and not recreate:
+			print("Loading Project from file", gsmp_filename)
+			project = Project.from_file(gsmp_filename)
+		else:
 
-		for project_settings in projects.iter_project_settings():
-			gsmp_filename = output_dir / f"{project_settings.name}.gsmp"
-			if gsmp_filename.exists() and not recreate:
-				print("Loading Project from file", gsmp_filename)
-				project = Project.from_file(gsmp_filename)
-			else:
+			# Initialise search engine.
+			with engine_on_demand(config.pyms_nist_search) as search:
 
 				repeats = []
 
@@ -367,14 +367,14 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 
 					repeats.append(repeat)
 
-				project = project_from_repeats(repeats, project_settings.name, method, engine=search)
+				project = project_from_repeats(repeats, project_settings.name, method, engine=search.engine)
 				export_filename = project.export(output_dir)
 				print(f"Project saved to {export_filename!r}")
 
 			if not project.consolidated_peaks:
 
 				cp_filter = ConsolidatedPeakFilter.from_method(method.consolidate)
-				ms_comparison_df = project.consolidate(search, cp_filter)
+				ms_comparison_df = project.consolidate(search.engine, cp_filter)
 				# print(ms_comparison_df)
 
 				export_filename = project.export(output_dir)
