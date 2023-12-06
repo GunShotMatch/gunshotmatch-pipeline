@@ -56,8 +56,8 @@ gunshotmatch-pipeline
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/gunshotmatch-pipeline/badge.svg
-		:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/gunshotmatch-pipeline/
+	.. |requires| image:: https://dependency-dash.repo-helper.uk/github/GunShotMatch/gunshotmatch-pipeline/badge.svg
+		:target: https://dependency-dash.repo-helper.uk/github/GunShotMatch/gunshotmatch-pipeline/
 		:alt: Requirements Status
 
 	.. |codefactor| codefactor-shield::
@@ -131,6 +131,6 @@ Contents
 
 	View the :ref:`Function Index <genindex>` or browse the `Source Code <_modules/index.html>`__.
 
-	:github:repo:`Browse the GitHub Repository <domdfcoding/gunshotmatch-pipeline>`
+	:github:repo:`Browse the GitHub Repository <GunShotMatch/gunshotmatch-pipeline>`
 
 .. end links

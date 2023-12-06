@@ -3,13 +3,13 @@ Downloading source code
 =========================
 
 The ``gunshotmatch-pipeline`` source code is available on GitHub,
-and can be accessed from the following URL: https://github.com/domdfcoding/gunshotmatch-pipeline
+and can be accessed from the following URL: https://github.com/GunShotMatch/gunshotmatch-pipeline
 
 If you have ``git`` installed, you can clone the repository with the following command:
 
 .. prompt:: bash
 
-	git clone https://github.com/domdfcoding/gunshotmatch-pipeline
+	git clone https://github.com/GunShotMatch/gunshotmatch-pipeline
 
 .. parsed-literal::
 

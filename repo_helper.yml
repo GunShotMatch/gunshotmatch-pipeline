@@ -4,7 +4,8 @@ copyright_years: "2020-2023"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
 version: "0.0.0"
-username: "domdfcoding"
+username: "GunShotMatch"
+assignee: "domdfcoding"
 license: 'MIT'
 short_desc: 'GunShotMatch Pipeline'
 

@@ -39,7 +39,7 @@ html_theme_options = {"logo_only": False}
 
 html_context = {
 		"display_github": True,
-		"github_user": "domdfcoding",
+		"github_user": "GunShotMatch",
 		"github_repo": "gunshotmatch-pipeline",
 		"github_version": "master",
 		"conf_py_path": "/doc-source/",
