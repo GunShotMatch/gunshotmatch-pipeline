@@ -156,4 +156,3 @@ def write_combined_csv(repeat: Repeat, output_dir: PathPlus) -> None:
 		for peak in qualified_peaks:
 			for row in to_csv(peak):
 				combine_csv.write(f'{";".join(row)}\n')
-
