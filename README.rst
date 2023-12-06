@@ -4,7 +4,7 @@ gunshotmatch-pipeline
 
 .. start short_desc
 
-**GunShotMatch Pipeline**
+**GunShotMatch Analysis Pipeline**
 
 .. end short_desc
 

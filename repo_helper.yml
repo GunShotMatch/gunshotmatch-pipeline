@@ -7,7 +7,7 @@ version: "0.0.0"
 username: "GunShotMatch"
 assignee: "domdfcoding"
 license: 'MIT'
-short_desc: 'GunShotMatch Pipeline'
+short_desc: 'GunShotMatch Analysis Pipeline'
 
 enable_tests: false
 enable_conda: false

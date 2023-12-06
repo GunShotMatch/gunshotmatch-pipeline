@@ -5,7 +5,7 @@ build-backend = "whey"
 [project]
 name = "gunshotmatch-pipeline"
 version = "0.0.0"
-description = "GunShotMatch Pipeline"
+description = "GunShotMatch Analysis Pipeline"
 readme = "README.rst"
 keywords = []
 dynamic = [ "requires-python", "classifiers", "dependencies",]
