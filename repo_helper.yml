@@ -11,7 +11,6 @@ short_desc: 'GunShotMatch Analysis Pipeline'
 
 enable_tests: false
 enable_conda: false
-on_pypi: false
 use_whey: true
 
 python_versions:
