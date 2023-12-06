@@ -1,0 +1,51 @@
+[global]
+method = "method.toml"
+config = "config.toml"
+data_directory = "data"
+output_directory = "output"
+
+["CBC 9mm"]
+datafiles = [
+	"CBC_5_SUBTRACT.JDX",
+	"CBC_6_SUBTRACT.JDX",
+	"CBC_7_SUBTRACT.JDX",
+	"CBC_8_SUBTRACT.JDX",
+	"CBC_9_SUBTRACT.JDX",
+]
+
+["CCI .22LR"]
+datafiles = [
+	"CCI_1_SUBTRACT.JDX",
+	"CCI_2_SUBTRACT.JDX",
+	"CCI_3_SUBTRACT.JDX",
+	"CCI_4_SUBTRACT.JDX",
+	"CCI_5_SUBTRACT.JDX",
+]
+
+["CLEANRANGE 9mm"]
+datafiles = [
+	"CLEANRANGE_5_SUBTRACT.JDX",
+	"CLEANRANGE_6_SUBTRACT.JDX",
+	"CLEANRANGE_7_SUBTRACT.JDX",
+	"CLEANRANGE_8_SUBTRACT.JDX",
+	"CLEANRANGE_9_SUBTRACT.JDX",
+]
+
+["ELEY .22LR"]
+datafiles = [
+	"ELEY_1_SUBTRACT.JDX",
+	"ELEY_2_SUBTRACT.JDX",
+	"ELEY_3_SUBTRACT.JDX",
+	"ELEY_4_SUBTRACT.JDX",
+	"ELEY_5_SUBTRACT.JDX",
+]
+
+# Helpful copy-paste boilerplate
+# [""]
+# datafiles = [
+# 	"",
+# 	"",
+# 	"",
+# 	"",
+# 	"",
+# ]

@@ -1,3 +1,6 @@
+# See https://libgunshotmatch.readthedocs.io/en/latest/api/method.html for parameters
+# TODO: proper docs for the config file (à la whey's for pyproject.toml)
+
 [method.intensity_matrix]
 crop_mass_range = [
     50,

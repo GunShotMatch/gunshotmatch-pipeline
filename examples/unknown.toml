@@ -1,0 +1,6 @@
+name = "Unknown_Example"
+method = "method.toml"
+config = "config.toml"
+data_directory = "data"
+output_directory = "unknowns"
+datafile = "ELEY_4_SUBTRACT.JDX"
