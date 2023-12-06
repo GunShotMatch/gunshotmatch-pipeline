@@ -9,7 +9,6 @@ license: 'MIT'
 short_desc: 'GunShotMatch Pipeline'
 
 enable_tests: false
-enable_docs: false
 enable_conda: false
 on_pypi: false
 use_whey: true
@@ -24,26 +23,25 @@ python_versions:
 additional_ignore:
  - trees
  - output
+ - output_orig
  - data
+ - unknowns
+ - decision_tree_data
 
-# manifest_additional:
-#  - "include domdf_python_tools/google-10000-english-no-swears.txt"
-
-# intersphinx_mapping:
-#  - "'pandas': ('https://pandas.pydata.org/docs/', None)"
-#  - "'consolekit': ('https://consolekit.readthedocs.io/en/latest/', None)"
-#  - "'pytest': ('https://docs.pytest.org/en/stable', None)"
-#  - "'pytest-regressions': ('https://pytest-regressions.readthedocs.io/en/latest/', None)"
-
-# extra_sphinx_extensions:
-#  - sphinx_autofixture
-#  - sphinx_highlights
-#  - sphinx_toolbox.more_autosummary.column_widths
+extra_sphinx_extensions:
+ - attr_utils.autoattrs
+ - sphinx_toolbox.more_autosummary.column_widths
 #  - sphinx_toolbox.latex.succinct_seealso
-#  - latex_unicode
 
 # tox_unmanaged:
 #  - testenv
 
 # additional_ignore:
 #  - demo.py
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - autosummary_widths_builders = ["latex"]
+#  - needspace_amount = r"5\baselineskip"
+
+standalone_contrib_guide: true

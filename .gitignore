@@ -87,4 +87,7 @@ Pipfile.lock
 .pyre/
 trees
 output
+output_orig
 data
+unknowns
+decision_tree_data
