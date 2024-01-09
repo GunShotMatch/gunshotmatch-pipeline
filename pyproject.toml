@@ -33,6 +33,18 @@ license-key = "MIT"
 package = "gunshotmatch_pipeline"
 
 [tool.importcheck]
+always = [
+    "gunshotmatch_pipeline",
+    "gunshotmatch_pipeline.config",
+    "gunshotmatch_pipeline.decision_tree",
+    "gunshotmatch_pipeline.exporters",
+    "gunshotmatch_pipeline.nist_ms_search",
+    "gunshotmatch_pipeline.peaks",
+    "gunshotmatch_pipeline.projects",
+    "gunshotmatch_pipeline.results",
+    "gunshotmatch_pipeline.unknowns",
+    "gunshotmatch_pipeline.utils",
+]
 
 [tool.mypy]
 python_version = "3.8"
