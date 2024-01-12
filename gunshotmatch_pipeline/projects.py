@@ -341,15 +341,14 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 	else:
 		raise ValueError("'process_projects' requires all projects to have common configuration.")
 
-	for project_settings in projects.iter_project_settings():
-		gsmp_filename = output_dir / f"{project_settings.name}.gsmp"
-		if gsmp_filename.exists() and not recreate:
-			print("Loading Project from file", gsmp_filename)
-			project = Project.from_file(gsmp_filename)
-		else:
-
-			# Initialise search engine.
-			with engine_on_demand(config.pyms_nist_search) as search:
+	# Initialise search engine.
+	with engine_on_demand(config.pyms_nist_search) as search:
+		for project_settings in projects.iter_project_settings():
+			gsmp_filename = output_dir / f"{project_settings.name}.gsmp"
+			if gsmp_filename.exists() and not recreate:
+				print("Loading Project from file", gsmp_filename)
+				project = Project.from_file(gsmp_filename)
+			else:
 
 				repeats = []
 
@@ -369,14 +368,15 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 
 				project = project_from_repeats(repeats, project_settings.name, method, engine=search.engine)
 				export_filename = project.export(output_dir)
+				# print(f"Project saved to {export_filename!r}")
+
+			if not project.consolidated_peaks:
+
+				cp_filter = ConsolidatedPeakFilter.from_method(method.consolidate)
+				ms_comparison_df = project.consolidate(search.engine, cp_filter)
+				# print(ms_comparison_df)
+
+				export_filename = project.export(output_dir)
 				print(f"Project saved to {export_filename!r}")
-
-				if not project.consolidated_peaks:
-
-					cp_filter = ConsolidatedPeakFilter.from_method(method.consolidate)
-					ms_comparison_df = project.consolidate(search.engine, cp_filter)
-					# print(ms_comparison_df)
-
-					export_filename = project.export(output_dir)
 
 			yield project
