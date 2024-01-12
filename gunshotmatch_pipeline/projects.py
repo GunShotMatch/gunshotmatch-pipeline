@@ -371,12 +371,12 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 				export_filename = project.export(output_dir)
 				print(f"Project saved to {export_filename!r}")
 
-			if not project.consolidated_peaks:
+				if not project.consolidated_peaks:
 
-				cp_filter = ConsolidatedPeakFilter.from_method(method.consolidate)
-				ms_comparison_df = project.consolidate(search.engine, cp_filter)
-				# print(ms_comparison_df)
+					cp_filter = ConsolidatedPeakFilter.from_method(method.consolidate)
+					ms_comparison_df = project.consolidate(search.engine, cp_filter)
+					# print(ms_comparison_df)
 
-				export_filename = project.export(output_dir)
+					export_filename = project.export(output_dir)
 
 			yield project
