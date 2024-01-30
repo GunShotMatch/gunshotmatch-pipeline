@@ -26,6 +26,9 @@ General utility functions.
 #  OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+# stdlib
+from typing import Dict
+
 # 3rd party
 from domdf_python_tools.words import Plural
 
@@ -36,13 +39,27 @@ except ImportError:
 	# 3rd party
 	import tomli as tomllib  # type: ignore[no-redef]
 
-__all__ = ("project_plural", "friendly_name_mapping", "tomllib")
+__all__ = ("project_plural", "friendly_name_mapping", "tomllib", "NameMapping")
 
 #: :class:`domdf_python_tools.words.Plural` for ``project``.
 project_plural = Plural("project", "projects")
 
+
+class NameMapping(Dict[str, str]):
+	"""
+	Class for mapping IUPAC preferred names to more common, friendlier names.
+
+	On lookup, if the name has no known alias the looked-up name is returned.
+
+	.. versionadded:: 0.4.0
+	"""
+
+	def __missing__(self, key: str) -> str:
+		return key
+
+
 #: Mapping of IUPAC preferred names to more common, friendlier names.
-friendly_name_mapping = {
+friendly_name_mapping = NameMapping({
 		# IUPAC: Friendly
 		"Benzenamine, 4-nitro-N-phenyl-": "4-NDPA",
 		"Benzenamine, 2-nitro-N-phenyl-": "2-NDPA",
@@ -50,5 +67,11 @@ friendly_name_mapping = {
 		"Benzene, nitro-": "Nitrobenzene",
 		"Benzene, 2-methyl-1,3-dinitro-": "2,6-DNT",
 		"Benzene, 1-methyl-2,3-dinitro-": "2,3-DNT",
-		"Benzene, 1-methyl-2,4-dinitro-": "2,4-DNT"
-		}
+		"Benzene, 1-methyl-2,4-dinitro-": "2,4-DNT",
+		"Benzene, 1-methyl-2-nitro-": "1-Methyl-2-nitroenzene",
+		"Phenol, 2-nitro-": "2-Nitrophenol",
+		"Benzene, 1-methyl-4-nitro-": "4-Nitrotoluene",
+		"Benzene, 1-methyl-3-nitro-": "3-Nitrotoluene",
+		"Benzenamine, N-ethyl-N-nitroso-": "N-Nitroso-N-ethylaniline",
+		"Phenol, 4-methyl-2-nitro-": "4-Methyl-2-nitrophenol",
+		})
