@@ -57,6 +57,7 @@ __all__ = (
 		"visualise_decision_tree",
 		"get_feature_names",
 		"data_from_unknown",
+		"dotsafe_name",
 		)
 
 # Columns which don't correspond to compounds (features); i.e. metadata columns
@@ -204,6 +205,29 @@ def get_feature_names(data: pandas.DataFrame) -> List[str]:
 	return list(data.columns[~data.columns.isin(_non_feature_columns)])
 
 
+_dotsafe_transmap = str.maketrans({
+		'<': "&lt;",
+		'>': "&gt;",
+		'&': "&amp;",
+		"'": "&apos;",
+		'"': "&quot;",
+		})
+
+
+def dotsafe_name(name: str) -> str:
+	"""
+	Return a dot (graphviz) suitable name for a sample, with special characters escaped.
+
+	:param name:
+
+	:rtype:
+
+	.. versionadded:: 0.5.0
+	"""
+
+	return name.translate(_dotsafe_transmap)
+
+
 def visualise_decision_tree(
 		data: pandas.DataFrame,
 		classifier: ClassifierMixin,
@@ -235,7 +259,7 @@ def visualise_decision_tree(
 				tree,
 				out_file=None,
 				feature_names=feature_names,
-				class_names=list(factorize_map),
+				class_names=list(map(dotsafe_name, factorize_map)),
 				filled=True,
 				special_characters=True,
 				)
