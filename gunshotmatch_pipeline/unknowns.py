@@ -137,13 +137,17 @@ def filter_and_identify_peaks(
 	top_n_peaks = method.alignment.top_n_peaks
 	min_peak_area = method.alignment.min_peak_area
 
-	print(f"Filtering to the largest {top_n_peaks} peaks with a peak area above {min_peak_area}")
-
 	peak_index_area_map = [(peak.area, peak.rt) for peak in repeat.peaks]
-	peak_index_area_map.sort(key=itemgetter(0), reverse=True)
 
-	# Get indices of largest n peaks based on `ident_top_peaks`
-	top_peaks_times = [rt / 60 for area, rt in peak_index_area_map[:top_n_peaks] if area >= min_peak_area]
+	if top_n_peaks:  # If ``0`` all peaks are included.
+		print(f"Filtering to the largest {top_n_peaks} peaks with a peak area above {min_peak_area}")
+
+		peak_index_area_map.sort(key=itemgetter(0), reverse=True)
+		peak_index_area_map = peak_index_area_map[:top_n_peaks]
+	else:
+		print(f"Filtering to peaks with an average peak area above {min_peak_area}")
+
+	top_peaks_times = [rt / 60 for area, rt in peak_index_area_map if area >= min_peak_area]
 
 	# peak_index_area_map = [(idx, peak.area, peak.rt) for idx, peak in enumerate(repeat.peaks)]
 	# peak_index_area_map.sort(key=itemgetter(1), reverse=True)
