@@ -33,7 +33,7 @@ from typing import Dict
 from domdf_python_tools.words import Plural
 
 try:
-	# 3rd party
+	# stdlib
 	import tomllib  # type: ignore[import]
 except ImportError:
 	# 3rd party
