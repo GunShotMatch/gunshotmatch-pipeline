@@ -1,0 +1,3 @@
+pyms_nist_search:
+  library_path: /home/domdf/Python/mainlib
+  user_library: false

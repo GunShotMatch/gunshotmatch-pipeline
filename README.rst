@@ -18,7 +18,7 @@ gunshotmatch-pipeline
 	* - Docs
 	  - |docs| |docs_check|
 	* - Tests
-	  - |actions_linux| |actions_windows| |actions_macos|
+	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -59,6 +59,10 @@ gunshotmatch-pipeline
 .. |requires| image:: https://dependency-dash.repo-helper.uk/github/GunShotMatch/gunshotmatch-pipeline/badge.svg
 	:target: https://dependency-dash.repo-helper.uk/github/GunShotMatch/gunshotmatch-pipeline/
 	:alt: Requirements Status
+
+.. |coveralls| image:: https://img.shields.io/coveralls/github/GunShotMatch/gunshotmatch-pipeline/master?logo=coveralls
+	:target: https://coveralls.io/github/GunShotMatch/gunshotmatch-pipeline?branch=master
+	:alt: Coverage
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/GunShotMatch/gunshotmatch-pipeline?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/GunShotMatch/gunshotmatch-pipeline

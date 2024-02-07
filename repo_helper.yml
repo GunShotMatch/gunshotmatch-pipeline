@@ -9,9 +9,9 @@ assignee: "domdfcoding"
 license: 'MIT'
 short_desc: 'GunShotMatch Analysis Pipeline'
 
-enable_tests: false
 enable_conda: false
 use_whey: true
+min_coverage: 70
 
 python_versions:
  3.8:

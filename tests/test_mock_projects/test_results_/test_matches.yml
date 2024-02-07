@@ -1,0 +1,1749 @@
+compounds:
+  1,2-Benzenedicarboxylic acid, butyl 2-ethylhexyl ester:
+    CAS: 85-69-8
+    Hit Numbers:
+    - 3
+    - 1
+    - 4
+    - 1
+    Match Factors:
+    - 764
+    - 814
+    - 815
+    - 764
+    Mean Peak Area: 337445134
+    Mean Retention Time: 29
+    Peak Areas:
+    - 507552485.904762
+    - 394908934.76190484
+    - 299077611.76190454
+    - 148241504.80952367
+    Retention Times:
+    - 29.454782485961914
+    - 29.499849319458008
+    - 29.499366760253906
+    - 29.47946548461914
+    Reverse Match Factors:
+    - 882
+    - 900
+    - 881
+    - 869
+  1,2-Benzisothiazole:
+    CAS: 272-16-2
+    Hit Numbers:
+    - 3
+    - 1
+    - 1
+    - 2
+    Match Factors:
+    - 613
+    - 865
+    - 836
+    - 803
+    Mean Peak Area: 251360972
+    Mean Retention Time: 14
+    Peak Areas:
+    - 60860808.095238045
+    - 436881183.47619027
+    - 458165586.2857141
+    - 49536312.14285715
+    Retention Times:
+    - 14.21113395690918
+    - 14.226266860961914
+    - 14.247983932495117
+    - 14.206366539001465
+    Reverse Match Factors:
+    - 739
+    - 940
+    - 932
+    - 899
+  1,4-Butanediol, dinitrate:
+    CAS: 3457-91-8
+    Hit Numbers:
+    - 1
+    - 3
+    - 1
+    - 1
+    Match Factors:
+    - 698
+    - 716
+    - 718
+    - 726
+    Mean Peak Area: 1630070019
+    Mean Retention Time: 17
+    Peak Areas:
+    - 1854814974.7142844
+    - 1459084080.8095226
+    - 1751577138.3333323
+    - 1454803884.7619042
+    Retention Times:
+    - 17.303800582885742
+    - 17.32270050048828
+    - 17.340717315673828
+    - 17.313966751098633
+    Reverse Match Factors:
+    - 749
+    - 775
+    - 779
+    - 770
+  1-Hexadecanol, 2-methyl-:
+    CAS: 2490-48-4
+    Hit Numbers:
+    - 3
+    - 2
+    - 1
+    - 1
+    Match Factors:
+    - 730
+    - 742
+    - 755
+    - 745
+    Mean Peak Area: 177589012
+    Mean Retention Time: 27
+    Peak Areas:
+    - 143786620.6190476
+    - 216634575.2380953
+    - 175819415.23809516
+    - 174115440.38095242
+    Retention Times:
+    - 27.281465530395508
+    - 27.31879997253418
+    - 27.31871795654297
+    - 27.308401107788086
+    Reverse Match Factors:
+    - 758
+    - 758
+    - 766
+    - 756
+  1H-Pyrrole-2-carboxaldehyde:
+    CAS: 1003-29-8
+    Hit Numbers:
+    - 3
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 432
+    - 735
+    - 671
+    - 652
+    Mean Peak Area: 49363048
+    Mean Retention Time: 8
+    Peak Areas:
+    - 19943424.714285713
+    - 132377085.047619
+    - 31342849.619047605
+    - 13788834.904761907
+    Retention Times:
+    - 8.719983100891113
+    - 8.7388334274292
+    - 8.768050193786621
+    - 8.759166717529297
+    Reverse Match Factors:
+    - 618
+    - 880
+    - 827
+    - 901
+  2,4-Pentanediol, 3-methyl-:
+    CAS: 5683-44-3
+    Hit Numbers:
+    - 4
+    - 4
+    - 2
+    - 7
+    Match Factors:
+    - 669
+    - 652
+    - 708
+    - 711
+    Mean Peak Area: 428841968
+    Mean Retention Time: 3
+    Peak Areas:
+    - 503994123.2857139
+    - 398580186.5714289
+    - 533858971.95238084
+    - 278934590.85714287
+    Retention Times:
+    - 3.6462666988372803
+    - 3.6556167602539062
+    - 3.6556832790374756
+    - 3.6466667652130127
+    Reverse Match Factors:
+    - 719
+    - 693
+    - 744
+    - 748
+  2,5-Cyclohexadiene-1,4-dione, 2,5-dimethyl-:
+    CAS: 137-18-8
+    Hit Numbers:
+    - 1
+    - 2
+    - 2
+    - 1
+    Match Factors:
+    - 792
+    - 799
+    - 749
+    - 747
+    Mean Peak Area: 80464280
+    Mean Retention Time: 11
+    Peak Areas:
+    - 67347796.4285714
+    - 133652233.04761901
+    - 73512602.09523807
+    - 47344490.85714287
+    Retention Times:
+    - 11.060850143432617
+    - 11.090716361999512
+    - 11.097900390625
+    - 11.074366569519043
+    Reverse Match Factors:
+    - 860
+    - 830
+    - 818
+    - 828
+  2,5-Cyclohexadiene-1,4-dione, 2,6-bis(1,1-dimethylethyl)-:
+    CAS: 719-22-2
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 740
+    - 831
+    - 788
+    - 764
+    Mean Peak Area: 71859377
+    Mean Retention Time: 19
+    Peak Areas:
+    - 35776414.66666662
+    - 131097699.76190467
+    - 82164875.38095234
+    - 38398521.09523805
+    Retention Times:
+    - 19.714384078979492
+    - 19.755300521850586
+    - 19.74391746520996
+    - 19.735567092895508
+    Reverse Match Factors:
+    - 799
+    - 842
+    - 803
+    - 796
+  2,5-Furandione, 3-(1,1-dimethylethyl)-:
+    CAS: 18261-7-9
+    Hit Numbers:
+    - 1
+    - 2
+    - 1
+    - 1
+    Match Factors:
+    - 611
+    - 630
+    - 569
+    - 713
+    Mean Peak Area: 29067824
+    Mean Retention Time: 10
+    Peak Areas:
+    - 25536310.95238095
+    - 36291424.523809515
+    - 18157573.7142857
+    - 36285987.95238097
+    Retention Times:
+    - 10.781999588012695
+    - 10.808199882507324
+    - 10.81171703338623
+    - 10.795516967773438
+    Reverse Match Factors:
+    - 759
+    - 651
+    - 627
+    - 782
+  2,5-Furandione, dihydro-3-methylene-:
+    CAS: 2170-3-8
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 766
+    - 719
+    - 674
+    - 709
+    Mean Peak Area: 167847086
+    Mean Retention Time: 6
+    Peak Areas:
+    - 107045041.52380955
+    - 241700731.19047627
+    - 194012680.80952364
+    - 128629893.80952379
+    Retention Times:
+    - 6.718550205230713
+    - 6.737266540527344
+    - 6.744566917419434
+    - 6.720866680145264
+    Reverse Match Factors:
+    - 859
+    - 849
+    - 845
+    - 835
+  2,6-Diisopropylnaphthalene:
+    CAS: 24157-81-1
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 627
+    - 764
+    - 679
+    - 744
+    Mean Peak Area: 40301823
+    Mean Retention Time: 25
+    Peak Areas:
+    - 43298102.14285713
+    - 85013924.57142855
+    - 21090886.7142857
+    - 11804381.095238088
+    Retention Times:
+    - 25.098684310913086
+    - 25.12868309020996
+    - 25.11351776123047
+    - 25.0947322845459
+    Reverse Match Factors:
+    - 762
+    - 848
+    - 769
+    - 810
+  2-Decenal, (Z)-:
+    CAS: 2497-25-8
+    Hit Numbers:
+    - 2
+    - 2
+    - 1
+    - 1
+    Match Factors:
+    - 698
+    - 691
+    - 757
+    - 794
+    Mean Peak Area: 44134969
+    Mean Retention Time: 15
+    Peak Areas:
+    - 37053138.2857143
+    - 49208964.38095233
+    - 56231536.952380925
+    - 34046239.85714287
+    Retention Times:
+    - 15.041133880615234
+    - 15.060050010681152
+    - 15.068849563598633
+    - 15.049283027648926
+    Reverse Match Factors:
+    - 867
+    - 840
+    - 867
+    - 869
+  2-Undecenal:
+    CAS: 53448-7-0
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 696
+    - 765
+    - 711
+    - 722
+    Mean Peak Area: 38068314
+    Mean Retention Time: 17
+    Peak Areas:
+    - 25255802.9047619
+    - 59837131.571428575
+    - 38049750.33333331
+    - 29130573.714285694
+    Retention Times:
+    - 17.523950576782227
+    - 17.553850173950195
+    - 17.553518295288086
+    - 17.530433654785156
+    Reverse Match Factors:
+    - 806
+    - 810
+    - 763
+    - 775
+  4a,8a-(Methaniminomethano)naphthalene-9,11-dione, 10-phenyl-:
+    CAS: 69915-10-2
+    Hit Numbers:
+    - 4
+    - 3
+    - 1
+    - 1
+    Match Factors:
+    - 587
+    - 622
+    - 734
+    - 584
+    Mean Peak Area: 68202815
+    Mean Retention Time: 13
+    Peak Areas:
+    - 52427689.476190425
+    - 79669813.42857136
+    - 112771337.57142851
+    - 27942422.714285724
+    Retention Times:
+    - 13.12874984741211
+    - 13.151232719421387
+    - 13.16195011138916
+    - 13.149666786193848
+    Reverse Match Factors:
+    - 716
+    - 697
+    - 773
+    - 669
+  Benz[a]anthracene, 7,12-dihydro-:
+    CAS: 16434-59-6
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 639
+    - 609
+    - 756
+    - 639
+    Mean Peak Area: 122310029
+    Mean Retention Time: 28
+    Peak Areas:
+    - 129974616.2857142
+    - 140848432.7619049
+    - 92655840.38095225
+    - 125761229.80952378
+    Retention Times:
+    - 28.229917526245117
+    - 28.2584171295166
+    - 28.267282485961914
+    - 28.24756622314453
+    Reverse Match Factors:
+    - 879
+    - 854
+    - 875
+    - 853
+  Benzaldehyde:
+    CAS: 100-52-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 879
+    - 838
+    - 908
+    - 896
+    Mean Peak Area: 597188046
+    Mean Retention Time: 7
+    Peak Areas:
+    - 500791734.6666665
+    - 684215529.0000002
+    - 697519980.8571421
+    - 506224940.61904746
+    Retention Times:
+    - 7.221916675567627
+    - 7.240783214569092
+    - 7.249949932098389
+    - 7.23348331451416
+    Reverse Match Factors:
+    - 884
+    - 853
+    - 915
+    - 901
+  Benzaldehyde, 3-methyl-:
+    CAS: 620-23-5
+    Hit Numbers:
+    - 1
+    - 3
+    - 2
+    - 5
+    Match Factors:
+    - 602
+    - 767
+    - 775
+    - 587
+    Mean Peak Area: 54557235
+    Mean Retention Time: 10
+    Peak Areas:
+    - 35963154.38095235
+    - 63066057.047619045
+    - 72113328.9047619
+    - 47086401.19047622
+    Retention Times:
+    - 10.42609977722168
+    - 10.470650672912598
+    - 10.474166870117188
+    - 10.44694995880127
+    Reverse Match Factors:
+    - 692
+    - 842
+    - 816
+    - 659
+  Benzene, 1,2,3-trimethyl-:
+    CAS: 526-73-8
+    Hit Numbers:
+    - 2
+    - 5
+    - 2
+    - 2
+    Match Factors:
+    - 686
+    - 679
+    - 663
+    - 683
+    Mean Peak Area: 113929742
+    Mean Retention Time: 9
+    Peak Areas:
+    - 71982653.42857143
+    - 144528663.52380946
+    - 146682862.04761904
+    - 92524792.66666667
+    Retention Times:
+    - 9.967466354370117
+    - 10.00100040435791
+    - 10.000850677490234
+    - 9.984649658203125
+    Reverse Match Factors:
+    - 745
+    - 736
+    - 706
+    - 728
+  Benzene, 1,4-dichloro-:
+    CAS: 106-46-7
+    Hit Numbers:
+    - 2
+    - 2
+    - 1
+    - 1
+    Match Factors:
+    - 617
+    - 665
+    - 669
+    - 728
+    Mean Peak Area: 23631191
+    Mean Retention Time: 8
+    Peak Areas:
+    - 19203033.904761888
+    - 22554219.23809522
+    - 32176843.999999993
+    - 20590669.714285705
+    Retention Times:
+    - 8.576883316040039
+    - 8.59939956665039
+    - 8.606616020202637
+    - 8.583049774169922
+    Reverse Match Factors:
+    - 824
+    - 805
+    - 801
+    - 840
+  Benzene, 1-methyl-2,4-dinitro-:
+    CAS: 121-14-2
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 926
+    - 937
+    - 920
+    - 926
+    Mean Peak Area: 7313500780
+    Mean Retention Time: 21
+    Peak Areas:
+    - 7697645561.57143
+    - 7677110489.380949
+    - 6450805881.095238
+    - 7428441191.714286
+    Retention Times:
+    - 21.250732421875
+    - 21.288116455078125
+    - 21.278566360473633
+    - 21.268583297729492
+    Reverse Match Factors:
+    - 926
+    - 940
+    - 923
+    - 927
+  Benzene, 1-methyl-2-nitro-:
+    CAS: 88-72-2
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 904
+    - 903
+    - 886
+    - 902
+    Mean Peak Area: 385923202
+    Mean Retention Time: 12
+    Peak Areas:
+    - 318455949.1428566
+    - 505484113.8571426
+    - 436558031.3333333
+    - 283194716.33333343
+    Retention Times:
+    - 12.45146656036377
+    - 12.479533195495605
+    - 12.479233741760254
+    - 12.463133811950684
+    Reverse Match Factors:
+    - 919
+    - 917
+    - 901
+    - 916
+  Benzene, 1-methyl-4-nitro-:
+    CAS: 99-99-0
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 885
+    - 867
+    - 848
+    - 877
+    Mean Peak Area: 837763991
+    Mean Retention Time: 13
+    Peak Areas:
+    - 616564281.1428567
+    - 1157820233.2380965
+    - 972871159.9047614
+    - 603800289.9523807
+    Retention Times:
+    - 13.902934074401855
+    - 13.92906665802002
+    - 13.936100006103516
+    - 13.91651725769043
+    Reverse Match Factors:
+    - 906
+    - 893
+    - 893
+    - 893
+  Benzene, 2-methyl-1,3-dinitro-:
+    CAS: 606-20-2
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 931
+    - 930
+    - 924
+    - 932
+    Mean Peak Area: 2868839355
+    Mean Retention Time: 19
+    Peak Areas:
+    - 3211704587.238096
+    - 3164195834.000001
+    - 2646732234.9047647
+    - 2452724766.2857103
+    Retention Times:
+    - 19.5712833404541
+    - 19.5975341796875
+    - 19.600833892822266
+    - 19.585134506225586
+    Reverse Match Factors:
+    - 938
+    - 938
+    - 940
+    - 937
+  Benzene, chloro-:
+    CAS: 108-90-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 572
+    - 695
+    - 586
+    - 554
+    Mean Peak Area: 15433306
+    Mean Retention Time: 4
+    Peak Areas:
+    - 15290796.761904765
+    - 18368437.14285714
+    - 12122610.619047606
+    - 15951379.714285703
+    Retention Times:
+    - 4.520916938781738
+    - 4.539566516876221
+    - 4.539566516876221
+    - 4.530566692352295
+    Reverse Match Factors:
+    - 760
+    - 763
+    - 681
+    - 630
+  Benzene, nitro-:
+    CAS: 98-95-3
+    Hit Numbers:
+    - 1
+    - 7
+    - 3
+    - 1
+    Match Factors:
+    - 793
+    - 475
+    - 481
+    - 783
+    Mean Peak Area: 235817868
+    Mean Retention Time: 10
+    Peak Areas:
+    - 243216094.33333305
+    - 320501287.14285713
+    - 241691020.90476167
+    - 137863073.19047624
+    Retention Times:
+    - 10.525166511535645
+    - 10.522016525268555
+    - 10.521866798400879
+    - 10.535017013549805
+    Reverse Match Factors:
+    - 897
+    - 676
+    - 669
+    - 853
+  Benzoic acid, butyl ester:
+    CAS: 136-60-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 2
+    Match Factors:
+    - 781
+    - 894
+    - 889
+    - 681
+    Mean Peak Area: 251771790
+    Mean Retention Time: 17
+    Peak Areas:
+    - 93294916.23809518
+    - 364770765.9523808
+    - 527316171.04761904
+    - 21705309.0
+    Retention Times:
+    - 17.76978302001953
+    - 17.79599952697754
+    - 17.79935073852539
+    - 17.783599853515625
+    Reverse Match Factors:
+    - 867
+    - 932
+    - 931
+    - 831
+  Bicyclohexyl, 4-phenyl-:
+    CAS: 20273-27-2
+    Hit Numbers:
+    - 1
+    - 1
+    - 2
+    - 1
+    Match Factors:
+    - 724
+    - 728
+    - 800
+    - 707
+    Mean Peak Area: 54219170
+    Mean Retention Time: 30
+    Peak Areas:
+    - 31120816.95238092
+    - 30257739.047619056
+    - 130930032.5714285
+    - 24568093.476190437
+    Retention Times:
+    - 30.872966766357422
+    - 30.903284072875977
+    - 30.93575096130371
+    - 30.894115447998047
+    Reverse Match Factors:
+    - 779
+    - 769
+    - 824
+    - 754
+  Biphenyl:
+    CAS: 92-52-4
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 3
+    Match Factors:
+    - 751
+    - 889
+    - 905
+    - 695
+    Mean Peak Area: 91113760
+    Mean Retention Time: 17
+    Peak Areas:
+    - 42692307.38095237
+    - 108029851.23809528
+    - 201421361.38095236
+    - 12311522.33333333
+    Retention Times:
+    - 17.927549362182617
+    - 17.95009994506836
+    - 17.957117080688477
+    - 17.94871711730957
+    Reverse Match Factors:
+    - 860
+    - 928
+    - 931
+    - 827
+  Carbamoyl chloride, phenyl-:
+    CAS: 2040-76-8
+    Hit Numbers:
+    - 1
+    - 2
+    - 2
+    - 3
+    Match Factors:
+    - 865
+    - 832
+    - 854
+    - 853
+    Mean Peak Area: 137639363
+    Mean Retention Time: 7
+    Peak Areas:
+    - 149678658.52380955
+    - 133480656.52380937
+    - 177011834.57142842
+    - 90386304.04761904
+    Retention Times:
+    - 7.093083381652832
+    - 7.121033191680908
+    - 7.121033191680908
+    - 7.104599952697754
+    Reverse Match Factors:
+    - 891
+    - 876
+    - 875
+    - 882
+  Dodecane, 5,8-diethyl-:
+    CAS: 24251-86-3
+    Hit Numbers:
+    - 1
+    - 3
+    - 7
+    - 8
+    Match Factors:
+    - 655
+    - 731
+    - 750
+    - 701
+    Mean Peak Area: 121610843
+    Mean Retention Time: 23
+    Peak Areas:
+    - 55942828.52380951
+    - 177018567.1904762
+    - 213347540.57142848
+    - 40134438.857142866
+    Retention Times:
+    - 23.91358184814453
+    - 23.939916610717773
+    - 23.939449310302734
+    - 23.92063331604004
+    Reverse Match Factors:
+    - 699
+    - 740
+    - 759
+    - 724
+  Dodecyl acrylate:
+    CAS: 2156-97-0
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 843
+    - 849
+    - 841
+    - 848
+    Mean Peak Area: 1430541650
+    Mean Retention Time: 24
+    Peak Areas:
+    - 1126645716.7142856
+    - 2132953561.190474
+    - 1363181164.6666656
+    - 1099386158.4285684
+    Retention Times:
+    - 24.482282638549805
+    - 24.508615493774414
+    - 24.51548194885254
+    - 24.496667861938477
+    Reverse Match Factors:
+    - 872
+    - 872
+    - 874
+    - 866
+  E-2-Tetradecen-1-ol:
+    CAS: '---'
+    Hit Numbers:
+    - 8
+    - 3
+    - 2
+    - 1
+    Match Factors:
+    - 682
+    - 795
+    - 793
+    - 777
+    Mean Peak Area: 59084010
+    Mean Retention Time: 18
+    Peak Areas:
+    - 66616141.047619015
+    - 45086916.04761903
+    - 73117596.47619048
+    - 51515388.666666634
+    Retention Times:
+    - 18.907184600830078
+    - 18.926082611083984
+    - 18.936748504638672
+    - 18.921016693115234
+    Reverse Match Factors:
+    - 779
+    - 818
+    - 823
+    - 831
+  Eicosane:
+    CAS: 112-95-8
+    Hit Numbers:
+    - 2
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 832
+    - 852
+    - 854
+    - 856
+    Mean Peak Area: 202872747
+    Mean Retention Time: 34
+    Peak Areas:
+    - 261957173.80952364
+    - 203351911.52380934
+    - 172815066.80952364
+    - 173366836.95238084
+    Retention Times:
+    - 34.002681732177734
+    - 34.03666687011719
+    - 34.03606414794922
+    - 34.027549743652344
+    Reverse Match Factors:
+    - 897
+    - 885
+    - 882
+    - 895
+  Eicosane, 7-hexyl-:
+    CAS: 55333-99-8
+    Hit Numbers:
+    - 5
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 670
+    - 707
+    - 780
+    - 747
+    Mean Peak Area: 40966905
+    Mean Retention Time: 33
+    Peak Areas:
+    - 45802535.23809526
+    - 28677697.33333331
+    - 41322300.4761905
+    - 48065090.33333328
+    Retention Times:
+    - 33.59541702270508
+    - 33.622066497802734
+    - 33.62881851196289
+    - 33.616600036621094
+    Reverse Match Factors:
+    - 757
+    - 759
+    - 824
+    - 809
+  Furfural:
+    CAS: 98-1-1
+    Hit Numbers:
+    - 1
+    - 2
+    - 1
+    - 1
+    Match Factors:
+    - 921
+    - 899
+    - 894
+    - 800
+    Mean Peak Area: 334374535
+    Mean Retention Time: 4
+    Peak Areas:
+    - 211527183.99999982
+    - 683700612.7142853
+    - 353103196.2857143
+    - 89167150.90476191
+    Retention Times:
+    - 4.253849983215332
+    - 4.26336669921875
+    - 4.27251672744751
+    - 4.263466835021973
+    Reverse Match Factors:
+    - 967
+    - 927
+    - 939
+    - 908
+  Heneicosane:
+    CAS: 629-94-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 882
+    - 882
+    - 891
+    - 898
+    Mean Peak Area: 2778529205
+    Mean Retention Time: 31
+    Peak Areas:
+    - 3232836398.8095202
+    - 2255040868.6190457
+    - 2790582521.380954
+    - 2835657033.428568
+    Retention Times:
+    - 31.61043357849121
+    - 31.63709831237793
+    - 31.640199661254883
+    - 31.62795066833496
+    Reverse Match Factors:
+    - 883
+    - 885
+    - 893
+    - 899
+  Heptadecane:
+    CAS: 629-78-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 2
+    Match Factors:
+    - 836
+    - 896
+    - 746
+    - 713
+    Mean Peak Area: 1783639311
+    Mean Retention Time: 24
+    Peak Areas:
+    - 768066551.5714282
+    - 2430378385.142857
+    - 2822898876.8095207
+    - 1113213431.190476
+    Retention Times:
+    - 24.63271713256836
+    - 24.662715911865234
+    - 24.669565200805664
+    - 24.65078353881836
+    Reverse Match Factors:
+    - 882
+    - 901
+    - 879
+    - 868
+  Heptadecane, 2,3-dimethyl-:
+    CAS: 61868-3-9
+    Hit Numbers:
+    - 1
+    - 1
+    - 2
+    - 1
+    Match Factors:
+    - 752
+    - 814
+    - 825
+    - 821
+    Mean Peak Area: 159615105
+    Mean Retention Time: 26
+    Peak Areas:
+    - 121957018.85714285
+    - 189681394.99999997
+    - 182038002.09523797
+    - 144784007.3809526
+    Retention Times:
+    - 25.982933044433594
+    - 26.011133193969727
+    - 26.01984977722168
+    - 26.001001358032227
+    Reverse Match Factors:
+    - 874
+    - 884
+    - 890
+    - 889
+  Heptadecane, 9-hexyl-:
+    CAS: 55124-79-3
+    Hit Numbers:
+    - 2
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 638
+    - 640
+    - 720
+    - 679
+    Mean Peak Area: 66779539
+    Mean Retention Time: 31
+    Peak Areas:
+    - 75399307.14285716
+    - 73246765.33333331
+    - 55414514.714285724
+    - 63057571.571428515
+    Retention Times:
+    - 31.22151756286621
+    - 31.2445011138916
+    - 31.24394989013672
+    - 31.2316837310791
+    Reverse Match Factors:
+    - 647
+    - 644
+    - 724
+    - 683
+  Heptanal:
+    CAS: 111-71-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 773
+    - 832
+    - 798
+    - 826
+    Mean Peak Area: 170345668
+    Mean Retention Time: 5
+    Peak Areas:
+    - 137377522.66666698
+    - 205520098.19047597
+    - 191907785.28571427
+    - 146577266.57142845
+    Retention Times:
+    - 5.698549747467041
+    - 5.717249870300293
+    - 5.720916748046875
+    - 5.704516410827637
+    Reverse Match Factors:
+    - 839
+    - 860
+    - 838
+    - 854
+  Hexadecane:
+    CAS: 544-76-3
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 877
+    - 888
+    - 891
+    - 877
+    Mean Peak Area: 1318596777
+    Mean Retention Time: 22
+    Peak Areas:
+    - 594879122.2380949
+    - 1900611181.809523
+    - 2554862156.380952
+    - 224034650.99999997
+    Retention Times:
+    - 22.640399932861328
+    - 22.66673469543457
+    - 22.669965744018555
+    - 22.658449172973633
+    Reverse Match Factors:
+    - 896
+    - 888
+    - 892
+    - 887
+  Hexadecen-1-ol, trans-9-:
+    CAS: 64437-47-4
+    Hit Numbers:
+    - 1
+    - 3
+    - 3
+    - 6
+    Match Factors:
+    - 852
+    - 816
+    - 809
+    - 663
+    Mean Peak Area: 344305873
+    Mean Retention Time: 22
+    Peak Areas:
+    - 533248823.9523803
+    - 401904625.1428572
+    - 415337438.9523809
+    - 26732606.619047616
+    Retention Times:
+    - 22.486299514770508
+    - 22.50896644592285
+    - 22.515867233276367
+    - 22.500682830810547
+    Reverse Match Factors:
+    - 937
+    - 917
+    - 897
+    - 781
+  Hexanenitrile:
+    CAS: 628-73-9
+    Hit Numbers:
+    - 1
+    - 4
+    - 1
+    - 1
+    Match Factors:
+    - 691
+    - 664
+    - 668
+    - 704
+    Mean Peak Area: 63546812
+    Mean Retention Time: 5
+    Peak Areas:
+    - 65775984.66666669
+    - 41444876.28571425
+    - 82276919.95238094
+    - 64689467.2857143
+    Retention Times:
+    - 5.162866592407227
+    - 5.170567035675049
+    - 5.1815667152404785
+    - 5.168833255767822
+    Reverse Match Factors:
+    - 779
+    - 721
+    - 759
+    - 797
+  Isopropyl Myristate:
+    CAS: 110-27-0
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 656
+    - 708
+    - 706
+    - 712
+    Mean Peak Area: 139927060
+    Mean Retention Time: 26
+    Peak Areas:
+    - 105063098.80952376
+    - 187984915.33333328
+    - 141535498.00000003
+    - 125124728.1428571
+    Retention Times:
+    - 26.949865341186523
+    - 26.977983474731445
+    - 26.977834701538086
+    - 26.967700958251953
+    Reverse Match Factors:
+    - 720
+    - 778
+    - 782
+    - 789
+  Maleic anhydride:
+    CAS: 108-31-6
+    Hit Numbers:
+    - 2
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 554
+    - 628
+    - 771
+    - 645
+    Mean Peak Area: 82326130
+    Mean Retention Time: 4
+    Peak Areas:
+    - 48843471.333333276
+    - 120677308.14285709
+    - 107540532.7619048
+    - 52243208.23809519
+    Retention Times:
+    - 4.695799827575684
+    - 4.71441650390625
+    - 4.714449882507324
+    - 4.696249961853027
+    Reverse Match Factors:
+    - 871
+    - 856
+    - 936
+    - 831
+  Nonanal:
+    CAS: 124-19-6
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 751
+    - 745
+    - 705
+    - 786
+    Mean Peak Area: 196423692
+    Mean Retention Time: 10
+    Peak Areas:
+    - 156309236.14285702
+    - 221322922.47619033
+    - 272703836.85714287
+    - 135358776.095238
+    Retention Times:
+    - 10.965450286865234
+    - 10.987982749938965
+    - 10.991499900817871
+    - 10.975299835205078
+    Reverse Match Factors:
+    - 840
+    - 853
+    - 853
+    - 871
+  Nonanoic acid:
+    CAS: 112-5-0
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 720
+    - 816
+    - 809
+    - 802
+    Mean Peak Area: 182045728
+    Mean Retention Time: 15
+    Peak Areas:
+    - 88456704.42857145
+    - 277723999.19047606
+    - 272108241.23809516
+    - 89893968.5238095
+    Retention Times:
+    - 15.317350387573242
+    - 15.382317543029785
+    - 15.400365829467773
+    - 15.334766387939453
+    Reverse Match Factors:
+    - 828
+    - 837
+    - 837
+    - 847
+  Octadecane, 1-chloro-:
+    CAS: 3386-33-2
+    Hit Numbers:
+    - 3
+    - 4
+    - 1
+    - 2
+    Match Factors:
+    - 615
+    - 696
+    - 723
+    - 736
+    Mean Peak Area: 204480728
+    Mean Retention Time: 25
+    Peak Areas:
+    - 102524682.19047616
+    - 260403477.85714266
+    - 301960243.2857142
+    - 153034509.2857142
+    Retention Times:
+    - 25.458250045776367
+    - 25.48091697692871
+    - 25.495100021362305
+    - 25.4726505279541
+    Reverse Match Factors:
+    - 665
+    - 717
+    - 751
+    - 761
+  Octanal:
+    CAS: 124-13-0
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 826
+    - 822
+    - 840
+    - 826
+    Mean Peak Area: 231873410
+    Mean Retention Time: 8
+    Peak Areas:
+    - 165533501.42857146
+    - 313280964.5238097
+    - 273032579.57142836
+    - 175646594.52380955
+    Retention Times:
+    - 8.265016555786133
+    - 8.283866882324219
+    - 8.287416458129883
+    - 8.271183013916016
+    Reverse Match Factors:
+    - 869
+    - 840
+    - 867
+    - 848
+  Octanenitrile:
+    CAS: 124-12-9
+    Hit Numbers:
+    - 2
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 672
+    - 713
+    - 797
+    - 765
+    Mean Peak Area: 64711457
+    Mean Retention Time: 10
+    Peak Areas:
+    - 87269538.28571422
+    - 68174804.14285715
+    - 58587362.42857141
+    - 44814126.33333328
+    Retention Times:
+    - 10.323366165161133
+    - 10.342233657836914
+    - 10.342083930969238
+    - 10.32586669921875
+    Reverse Match Factors:
+    - 765
+    - 799
+    - 833
+    - 820
+  Oxygen difluoride:
+    CAS: 7783-41-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 915
+    - 554
+    - 634
+    - 842
+    Mean Peak Area: 103289573
+    Mean Retention Time: 3
+    Peak Areas:
+    - 119889036.85714285
+    - 68178530.09523803
+    - 145399436.23809513
+    - 79691289.28571424
+    Retention Times:
+    - 3.738283395767212
+    - 3.812183380126953
+    - 3.7846333980560303
+    - 3.766350030899048
+    Reverse Match Factors:
+    - 999
+    - 999
+    - 999
+    - 999
+  Pentadecane, 2,6,10-trimethyl-:
+    CAS: 3892-0-0
+    Hit Numbers:
+    - 4
+    - 1
+    - 1
+    - 10
+    Match Factors:
+    - 703
+    - 826
+    - 788
+    - 729
+    Mean Peak Area: 219169111
+    Mean Retention Time: 23
+    Peak Areas:
+    - 46246811.238095224
+    - 345161853.85714287
+    - 432989048.71428555
+    - 52278730.761904754
+    Retention Times:
+    - 23.55768394470215
+    - 23.60970115661621
+    - 23.61290168762207
+    - 23.586732864379883
+    Reverse Match Factors:
+    - 813
+    - 840
+    - 805
+    - 825
+  Phenol, 2-nitro-:
+    CAS: 88-75-5
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 805
+    - 877
+    - 841
+    - 860
+    Mean Peak Area: 198505487
+    Mean Retention Time: 11
+    Peak Areas:
+    - 150158189.8095238
+    - 331191780.1904761
+    - 183580346.0476188
+    - 129091634.61904763
+    Retention Times:
+    - 11.69926643371582
+    - 11.729150772094727
+    - 11.736299514770508
+    - 11.716465950012207
+    Reverse Match Factors:
+    - 879
+    - 899
+    - 874
+    - 884
+  Sulfur:
+    CAS: 13798-23-7
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 793
+    - 814
+    - 772
+    - 821
+    Mean Peak Area: 94283596
+    Mean Retention Time: 20
+    Peak Areas:
+    - 101955350.33333336
+    - 100350643.38095239
+    - 108230864.42857148
+    - 66597529.57142852
+    Retention Times:
+    - 20.844449996948242
+    - 20.885366439819336
+    - 20.888648986816406
+    - 20.865633010864258
+    Reverse Match Factors:
+    - 871
+    - 900
+    - 913
+    - 883
+  Tetracosane, 11-decyl-:
+    CAS: 55429-84-0
+    Hit Numbers:
+    - 3
+    - 6
+    - 6
+    - 4
+    Match Factors:
+    - 689
+    - 682
+    - 722
+    - 744
+    Mean Peak Area: 46136633
+    Mean Retention Time: 32
+    Peak Areas:
+    - 38265912.76190477
+    - 41696932.33333334
+    - 49386981.14285711
+    - 55196706.19047619
+    Retention Times:
+    - 32.41396713256836
+    - 32.447967529296875
+    - 32.454715728759766
+    - 32.43881607055664
+    Reverse Match Factors:
+    - 749
+    - 727
+    - 742
+    - 782
+  Tetradecane:
+    CAS: 629-59-4
+    Hit Numbers:
+    - 9
+    - 1
+    - 1
+    - 8
+    Match Factors:
+    - 684
+    - 843
+    - 790
+    - 734
+    Mean Peak Area: 121269518
+    Mean Retention Time: 18
+    Peak Areas:
+    - 72498136.8571429
+    - 172659349.80952367
+    - 205489014.57142863
+    - 34431573.14285708
+    Retention Times:
+    - 18.309133529663086
+    - 18.335350036621094
+    - 18.338701248168945
+    - 18.322967529296875
+    Reverse Match Factors:
+    - 829
+    - 878
+    - 850
+    - 804
+  Tricyclo[3.1.0.0(2,4)]hex-3-ene-3-carbonitrile:
+    CAS: 103495-51-8
+    Hit Numbers:
+    - 1
+    - 1
+    - 2
+    - 1
+    Match Factors:
+    - 855
+    - 788
+    - 834
+    - 940
+    Mean Peak Area: 98900697
+    Mean Retention Time: 7
+    Peak Areas:
+    - 95519245.33333333
+    - 81100400.38095236
+    - 148787083.90476194
+    - 70196062.09523807
+    Retention Times:
+    - 7.801949977874756
+    - 7.820899963378906
+    - 7.830033302307129
+    - 7.813600063323975
+    Reverse Match Factors:
+    - 949
+    - 938
+    - 919
+    - 944
+  Tricyclo[8.4.1.1(3,8)]hexadeca-3,5,7,10,12,14-hexaene-2,9-dione, anti-:
+    CAS: 7082-43-1
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 2
+    Match Factors:
+    - 643
+    - 648
+    - 671
+    - 612
+    Mean Peak Area: 43448725
+    Mean Retention Time: 31
+    Peak Areas:
+    - 51209862.904761866
+    - 27535978.476190466
+    - 76994083.19047618
+    - 18054979.09523808
+    Retention Times:
+    - 31.46368408203125
+    - 31.490333557128906
+    - 31.50811767578125
+    - 31.481182098388672
+    Reverse Match Factors:
+    - 713
+    - 691
+    - 698
+    - 652
+  cis-Stilbene:
+    CAS: 645-49-8
+    Hit Numbers:
+    - 7
+    - 2
+    - 2
+    - 6
+    Match Factors:
+    - 747
+    - 513
+    - 697
+    - 518
+    Mean Peak Area: 16094629
+    Mean Retention Time: 20
+    Peak Areas:
+    - 14338451.190476185
+    - 7223739.809523806
+    - 38546943.04761905
+    - 4269382.047619047
+    Retention Times:
+    - 20.881134033203125
+    - 20.933067321777344
+    - 20.93268394470215
+    - 20.909666061401367
+    Reverse Match Factors:
+    - 829
+    - 709
+    - 792
+    - 632
+  p-Benzoquinone:
+    CAS: 106-51-4
+    Hit Numbers:
+    - 1
+    - 1
+    - 1
+    - 1
+    Match Factors:
+    - 853
+    - 827
+    - 843
+    - 887
+    Mean Peak Area: 147769801
+    Mean Retention Time: 6
+    Peak Areas:
+    - 190831584.76190466
+    - 116423050.85714278
+    - 176105842.90476176
+    - 107718727.33333331
+    Retention Times:
+    - 6.219550132751465
+    - 6.234599590301514
+    - 6.241917133331299
+    - 6.22920036315918
+    Reverse Match Factors:
+    - 905
+    - 861
+    - 881
+    - 920
+metadata:
+  created: '2020-10-13T02:20:00'
+  original_filenames:
+  - /home/domdf/GunShotMatch/2024_analysis/data/hymax_1_021023_009.func_0.JDX
+  - /home/domdf/GunShotMatch/2024_analysis/data/hymax_2_161023_038.func_0.JDX
+  - /home/domdf/GunShotMatch/2024_analysis/data/hymax_3_231023_028.func_0.JDX
+  - /home/domdf/GunShotMatch/2024_analysis/data/hymax_4_061123_023.func_0.JDX
+  project: Eley Hymax

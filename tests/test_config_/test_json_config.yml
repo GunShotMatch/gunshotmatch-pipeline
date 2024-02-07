@@ -1,0 +1,3 @@
+pyms_nist_search:
+  library_path: /path/to/mainlib
+  user_library: true

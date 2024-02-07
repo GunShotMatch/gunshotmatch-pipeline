@@ -1,0 +1,76 @@
+global_settings:
+  config: config.toml
+  data_directory: data
+  method: method.toml
+  output_directory: new_output
+per_project_settings:
+  Eley Hymax:
+    config: null
+    data_directory: null
+    datafiles:
+    - hymax_1_021023_009.func_0.JDX
+    - hymax_2_161023_038.func_0.JDX
+    - hymax_3_231023_028.func_0.JDX
+    - hymax_4_061123_023.func_0.JDX
+    method: null
+    name: Eley Hymax
+  Eley Super Game:
+    config: null
+    data_directory: null
+    datafiles:
+    - esg_1_021023_029.func_0.JDX
+    - esg_2_161023_018.func_0.JDX
+    - esg_3_231023_008.func_0.JDX
+    - esg_4_061123_008.func_0.JDX
+    method: null
+    name: Eley Super Game
+  Gamebore Clear Pigeon:
+    config: null
+    data_directory: null
+    datafiles:
+    - pigeon_021023_039.func_0.JDX
+    - pigeon_2_161023_008.func_0.JDX
+    - pigeon_3_231023_018.func_0.JDX
+    - pigeon_4_061123_013.func_0.JDX
+    method: clean_burning_method.toml
+    name: Gamebore Clear Pigeon
+  Holland & Holland Super Twelve:
+    config: null
+    data_directory: null
+    datafiles:
+    - hh12_1_021023_014.func_0.JDX
+    - hh12_2_161023_033.func_0.JDX
+    - hh12_3_231023_033.func_0.JDX
+    - hh12_4_061123_038.func_0.JDX
+    method: null
+    name: Holland & Holland Super Twelve
+  Remington RXP:
+    config: null
+    data_directory: null
+    datafiles:
+    - rxp_1_021023_034.func_0.JDX
+    - rxp_2_161023_013.func_0.JDX
+    - rxp_3_231023_013.func_0.JDX
+    - rxp_4_061123_018.func_0.JDX
+    method: null
+    name: Remington RXP
+  Ward Thompson Classic:
+    config: null
+    data_directory: null
+    datafiles:
+    - classic_1_021023_024.func_0.JDX
+    - classic_2_161023_023.func_0.JDX
+    - classic_3_231023_023.func_0.JDX
+    - classic_4_061123_028.func_0.JDX
+    method: null
+    name: Ward Thompson Classic
+  Western Double A:
+    config: null
+    data_directory: null
+    datafiles:
+    - aa_1_021023_019.func_0.JDX
+    - aa_2_161023_028.func_0.JDX
+    - aa_3_231023_038.func_0.JDX
+    - aa_4_061123_033.func_0.JDX
+    method: null
+    name: Western Double A

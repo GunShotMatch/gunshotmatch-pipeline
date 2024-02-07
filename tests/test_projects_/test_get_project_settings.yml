@@ -1,0 +1,9 @@
+config: config.toml
+data_directory: data
+datafiles:
+- pigeon_021023_039.func_0.JDX
+- pigeon_2_161023_008.func_0.JDX
+- pigeon_3_231023_018.func_0.JDX
+- pigeon_4_061123_013.func_0.JDX
+method: clean_burning_method.toml
+name: Gamebore Clear Pigeon

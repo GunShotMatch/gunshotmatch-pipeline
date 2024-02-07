@@ -1,0 +1,13 @@
+# name = "Unknown_Example_2"
+# method = "method.toml"
+# config = "config.toml"
+# data_directory = "data"
+# output_directory = "unknowns"
+# datafile = "WINCHESTER_1_SUBTRACT.JDX"
+
+name = "Unknown Western Double A"
+method = "method.toml"
+config = "config.toml"
+data_directory = "data"
+output_directory = "unknowns"
+datafile = "aa_5_231123_013.func_0.JDX"
