@@ -29,6 +29,7 @@ Prepare data and train decision trees.
 #
 
 # stdlib
+import string
 from statistics import mean, stdev
 from string import ascii_lowercase
 from typing import Collection, List, Tuple
@@ -130,7 +131,9 @@ def simulate_data(
 	"""
 
 	propellant_data = gunshotmatch_pipeline.results.matches(project)
-	df_for_norm = pandas.DataFrame(index=list("abcde"))  # TODO: handle number of repeats not being 5
+
+	real_data_size = len(propellant_data["metadata"]["original_filenames"])
+	df_for_norm = pandas.DataFrame(index=list(string.ascii_lowercase[:real_data_size]))
 
 	compounds_data = propellant_data["compounds"]
 
@@ -163,7 +166,6 @@ def simulate_data(
 		for sample_idx, value in enumerate(simulated_values):
 			new_data[sample_idx].append(value)
 
-	real_data_size = len(df_for_norm)
 	for sample_idx in range(n_simulated):
 		# print(sample_idx, real_data_size+sample_idx)
 		df_for_norm.loc[ascii_lowercase[real_data_size + sample_idx]] = new_data[sample_idx]

@@ -28,6 +28,7 @@ Results presented in different formats.
 
 # stdlib
 import datetime
+import string
 from collections import defaultdict
 from string import ascii_lowercase
 from typing import Dict, List
@@ -150,7 +151,8 @@ def compounds_from_matches(*matches_data: Matches, normalize: bool = False) -> _
 		project_name = loaded_data["metadata"]["project"]
 
 		if normalize:
-			df_for_norm = pandas.DataFrame(index=list("abcde"))
+			data_size = len(loaded_data["metadata"]["original_filenames"])
+			df_for_norm = pandas.DataFrame(index=list(string.ascii_lowercase[:data_size]))
 
 			for compound in loaded_data["compounds"]:
 				df_for_norm[compound] = loaded_data["compounds"][compound]["Peak Areas"]
