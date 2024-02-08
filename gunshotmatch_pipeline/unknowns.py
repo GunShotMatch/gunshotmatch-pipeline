@@ -29,7 +29,7 @@ Metadata and pipeline for unknown samples.
 # stdlib
 import json
 from operator import itemgetter
-from typing import Type
+from typing import Dict, Type
 
 # 3rd party
 import attr
@@ -99,8 +99,10 @@ class UnknownSettings(MethodBase, LoaderMixin):
 		:param toml_string:
 		"""
 
-		parsed_toml = tomllib.loads(toml_string)
-		return cls(**parsed_toml)
+		parsed_toml: Dict[str, str] = tomllib.loads(toml_string)
+		understood_keys = {"name", "datafile", "method", "config", "output_directory", "data_directory"}
+		toml_subset = {k: v for k, v in parsed_toml.items() if k in understood_keys}
+		return cls(**toml_subset)
 
 	@classmethod
 	def from_json(cls: Type["UnknownSettings"], json_string: str) -> "UnknownSettings":
