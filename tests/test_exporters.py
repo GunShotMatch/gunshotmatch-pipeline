@@ -17,7 +17,8 @@ from gunshotmatch_pipeline.exporters import (
 
 
 @pytest.fixture(scope="module")
-def repeat() -> Repeat:
+def repeat(monkeypatch) -> Repeat:
+	monkeypatch.setenv("USERNAME", "test-user")
 	datafile = PathPlus(__file__).parent / "CBC_5_SUBTRACT.JDX"
 	repeat, gcms_data = prepare_datafile(datafile, Method(), verbose=True)
 	return repeat
