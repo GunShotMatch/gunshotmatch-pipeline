@@ -17,10 +17,11 @@ from gunshotmatch_pipeline.exporters import (
 
 
 @pytest.fixture(scope="module")
-def repeat(monkeypatch) -> Repeat:
-	monkeypatch.setenv("USERNAME", "test-user")
+def repeat() -> Repeat:
 	datafile = PathPlus(__file__).parent / "CBC_5_SUBTRACT.JDX"
-	repeat, gcms_data = prepare_datafile(datafile, Method(), verbose=True)
+	with pytest.MonkeyPatch.context() as mp:
+		mp.setenv("USERNAME", "test-user")
+		repeat, gcms_data = prepare_datafile(datafile, Method(), verbose=True)
 	return repeat
 
 
