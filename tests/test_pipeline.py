@@ -11,7 +11,11 @@ from libgunshotmatch.method import Method
 from gunshotmatch_pipeline import prepare_datafile
 
 
-def test_prepare_datafile(advanced_file_regression: AdvancedFileRegressionFixture):
+def test_prepare_datafile(
+		advanced_file_regression: AdvancedFileRegressionFixture,
+		monkeypatch,
+		):
+	monkeypatch.setenv("USERNAME", "test-user")
 	datafile = PathPlus(__file__).parent / "CBC_5_SUBTRACT.JDX"
 	repeat, gcms_data = prepare_datafile(datafile, Method(), verbose=True)
 	assert repeat.peaks
