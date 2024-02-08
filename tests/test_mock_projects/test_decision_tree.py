@@ -20,7 +20,15 @@ def test_fit_decision_tree(
 	data, factorize_map = data_from_projects(projects)
 
 	dataframe_regression.check(data)
-	assert factorize_map == []
+	assert factorize_map == [
+			"Eley Hymax",
+			"Eley Super Game",
+			"Gamebore Clear Pigeon",
+			"Holland & Holland Super Twelve",
+			"Remington RXP",
+			"Ward Thompson Classic",
+			"Western Double A",
+			]
 
 	classifier = DecisionTreeClassifier(random_state=1234)
 	feature_names = fit_decision_tree(data, classifier)
