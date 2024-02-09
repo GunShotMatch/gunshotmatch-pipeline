@@ -182,9 +182,9 @@ def process_unknown(
 		recreate: bool = False,
 		) -> Project:
 	"""
-	Process a set of projects with a common methods and config.
+	Process an "unknown" sample.
 
-	:param projects:
+	:param unknown:
 	:param output_dir:
 	:param recreate: Force regeneration of ``.gsmr`` and ``.gsmp`` files.
 	"""
