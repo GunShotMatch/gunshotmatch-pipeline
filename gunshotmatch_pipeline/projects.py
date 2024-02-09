@@ -346,7 +346,7 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 		for project_settings in projects.iter_project_settings():
 			gsmp_filename = output_dir / f"{project_settings.name}.gsmp"
 			if gsmp_filename.exists() and not recreate:
-				print("Loading Project from file", gsmp_filename)
+				print(f"Loading Project from file {gsmp_filename.as_posix()!r}")
 				project = Project.from_file(gsmp_filename)
 			else:
 
@@ -356,7 +356,7 @@ def process_projects(projects: Projects, output_dir: PathLike, recreate: bool = 
 					gsmr_filename = (output_dir / filename.name).with_suffix(".gsmr")
 					print(gsmr_filename)
 					if gsmr_filename.exists() and not recreate:
-						print("Loading Repeat from file", gsmr_filename)
+						print(f"Loading Repeat from file {gsmr_filename.as_posix()!r}")
 						repeat = Repeat.from_file(gsmr_filename)
 						repeat.peaks.datafile_name = repeat.name
 					else:

@@ -198,7 +198,7 @@ def process_unknown(
 	gsmp_filename = output_dir / f"{unknown.name}.gsmp"
 	# print(gsmp_filename)
 	if gsmp_filename.exists() and not recreate:
-		print("Loading Project from file", gsmp_filename)
+		print(f"Loading Unknown from file {gsmp_filename.as_posix()!r}")
 		project = Project.from_file(gsmp_filename)
 	else:
 
@@ -207,7 +207,7 @@ def process_unknown(
 			gsmr_filename = (output_dir / unknown.datafile).with_suffix(".gsmr")
 			# print(gsmr_filename)
 			if gsmr_filename.exists() and not recreate:
-				print("Loading Repeat from file", gsmr_filename)
+				print(f"Loading Repeat from file {gsmr_filename.as_posix()!r}")
 				repeat = Repeat.from_file(gsmr_filename)
 				repeat.peaks.datafile_name = repeat.name
 			else:
