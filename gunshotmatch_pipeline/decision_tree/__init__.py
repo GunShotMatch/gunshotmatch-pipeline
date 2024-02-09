@@ -110,9 +110,9 @@ def data_from_unknown(
 	data = pandas.DataFrame.from_dict(unknown_machine_learning_data(project, normalize))
 	data = data.rename(friendly_name_mapping, axis=1).fillna(0.0)
 
-	# data = data[list(existing_compounds & unknowns_compounds)]
-	for compound in set(feature_names).difference(data.columns):
-		data[compound] = 0.0
+	zeroes_padding_dict = {compound: 0.0 for compound in set(feature_names).difference(data.columns)}
+	zeroes_padding = pandas.DataFrame(zeroes_padding_dict, index=data.index)
+	data = pandas.concat((data, zeroes_padding), axis=1)
 
 	return data[feature_names]
 
