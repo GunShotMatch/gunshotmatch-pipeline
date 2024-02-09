@@ -96,11 +96,14 @@ def serialise_decision_tree(model: DecisionTreeClassifier) -> Dict[str, Any]:
 			"feature_importances_": model.feature_importances_.tolist(),
 			"max_features_": model.max_features_,
 			"n_classes_": int(model.n_classes_),
-			"n_features_in_": model.n_features_in_,  # "feature_names_in_": model.feature_names_in_.tolist(),
+			"n_features_in_": model.n_features_in_,
 			"n_outputs_": model.n_outputs_,
 			"tree_": tree,
 			"params": model.get_params()
 			}
+
+	if hasattr(model, "feature_names_in_"):
+		serialised_model["feature_names_in_"] = model.feature_names_in_.tolist()
 
 	tree_dtypes = []
 	for i in range(0, len(dtypes)):  # type: ignore[arg-type]
@@ -125,6 +128,9 @@ def deserialise_decision_tree(model_dict: Dict[str, Any]) -> DecisionTreeClassif
 	deserialised_model.n_classes_ = model_dict["n_classes_"]
 	deserialised_model.n_features_in_ = model_dict["n_features_in_"]
 	deserialised_model.n_outputs_ = model_dict["n_outputs_"]
+
+	if "feature_names_in_" in model_dict:
+		deserialised_model.feature_names_in_ = model_dict["feature_names_in_"]
 
 	tree = _deserialise_tree(
 			model_dict["tree_"],
@@ -159,10 +165,13 @@ def serialise_random_forest(model: RandomForestClassifier) -> Dict[str, Any]:
 			"params": model.get_params()
 			}
 
-	if "oob_score_" in model.__dict__:
+	if hasattr(model, "oob_score_"):
 		serialised_model["oob_score_"] = model.oob_score_
-	if "oob_decision_function_" in model.__dict__:
+	if hasattr(model, "oob_decision_function_"):
 		serialised_model["oob_decision_function_"] = model.oob_decision_function_.tolist()
+
+	if hasattr(model, "feature_names_in_"):
+		serialised_model["feature_names_in_"] = model.feature_names_in_.tolist()
 
 	if isinstance(model.n_classes_, int):
 		serialised_model["n_classes_"] = model.n_classes_
@@ -198,6 +207,8 @@ def deserialise_random_forest(model_dict: Dict[str, Any]) -> RandomForestClassif
 		model.oob_score_ = model_dict["oob_score_"]
 	if "oob_decision_function_" in model_dict:
 		model.oob_decision_function_ = model_dict["oob_decision_function_"]
+	if "feature_names_in_" in model_dict:
+		model.feature_names_in_ = model_dict["feature_names_in_"]
 
 	if isinstance(model_dict["n_classes_"], list):
 		model.n_classes_ = numpy.array(model_dict["n_classes_"])
