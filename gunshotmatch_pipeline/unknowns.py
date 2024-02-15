@@ -115,6 +115,21 @@ class UnknownSettings(MethodBase, LoaderMixin):
 		parsed_json = json.loads(json_string)
 		return cls(**parsed_json)
 
+	@classmethod
+	def from_toml_table(cls: Type["UnknownSettings"], name: str, table: Dict[str, str]) -> "UnknownSettings":
+		"""
+		Parse an :class:`~.UnknownSettings` from a TOML table
+		(as a table name and a dictionary representation of the table).
+
+		:param toml_string:
+
+		:rtype:
+
+		.. versionadded:: 0.6.0
+		"""  # noqa: D400
+
+		return cls(name, **table)
+
 	def to_toml(self) -> str:
 		"""
 		Convert an :class:`~.UnknownSettings` to a TOML string.

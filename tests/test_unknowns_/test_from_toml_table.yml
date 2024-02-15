@@ -1,0 +1,6 @@
+config: config.toml
+data_directory: data
+datafile: pigeon_4_061123_033.func_0.JDX
+method: method.toml
+name: Gamebore Clear Pigeon
+output_directory: unknowns
