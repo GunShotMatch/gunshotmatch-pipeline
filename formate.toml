@@ -54,4 +54,4 @@ known_third_party = [
     "tomli_w",
     "typing_extensions",
 ]
-known_first_party = "gunshotmatch_pipeline"
+known_first_party = [ "gunshotmatch_pipeline",]
