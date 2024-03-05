@@ -16,7 +16,9 @@ from gunshotmatch_pipeline.decision_tree.export import (
 		deserialise_decision_tree,
 		deserialise_random_forest,
 		serialise_decision_tree,
-		serialise_random_forest
+		serialise_random_forest,
+		verify_saved_decision_tree,
+		verify_saved_random_forest
 		)
 
 
@@ -59,6 +61,7 @@ def test_decision_tree(dataset: Tuple[List[float], List[int]], absolute: bool):
 	actual_predictions = deserialised_model.predict(dataset[0])
 
 	numpy.testing.assert_array_equal(expected_predictions, actual_predictions)
+	verify_saved_decision_tree(model, deserialised_model)
 
 
 @pytest.mark.parametrize("absolute", [True, False])
@@ -80,6 +83,7 @@ def test_decision_tree_sparse(sparse_dataset: Tuple[List[float], List[int]], abs
 	actual_predictions = deserialised_model.predict(sparse_dataset[0])
 
 	numpy.testing.assert_array_equal(expected_predictions, actual_predictions)
+	verify_saved_decision_tree(model, deserialised_model)
 
 
 @pytest.mark.parametrize("absolute", [True, False])
@@ -101,6 +105,7 @@ def test_random_forest(dataset: Tuple[List[float], List[int]], absolute: bool):
 	actual_predictions = deserialised_model.predict(dataset[0])
 
 	numpy.testing.assert_array_equal(expected_predictions, actual_predictions)
+	verify_saved_random_forest(model, deserialised_model)
 
 
 @pytest.mark.parametrize("absolute", [True, False])
@@ -122,3 +127,5 @@ def test_random_forest_sparse(sparse_dataset: Tuple[List[float], List[int]], abs
 	actual_predictions = deserialised_model.predict(sparse_dataset[0])
 
 	numpy.testing.assert_array_equal(expected_predictions, actual_predictions)
+
+	verify_saved_random_forest(model, deserialised_model)

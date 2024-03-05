@@ -44,7 +44,9 @@ __all__ = [
 		"deserialise_decision_tree",
 		"deserialise_random_forest",
 		"serialise_decision_tree",
-		"serialise_random_forest"
+		"serialise_random_forest",
+		"verify_saved_decision_tree",
+		"verify_saved_random_forest",
 		]
 
 
@@ -216,3 +218,90 @@ def deserialise_random_forest(model_dict: Dict[str, Any]) -> RandomForestClassif
 		model.n_classes_ = model_dict["n_classes_"]
 
 	return model
+
+
+def verify_saved_decision_tree(
+		in_process: DecisionTreeClassifier,
+		from_file: DecisionTreeClassifier,
+		) -> None:
+	"""
+	Verify the saved :class:`~sklearn.tree.DecisionTreeClassifier` matches the model in memory.
+
+	Will raise an :exc:`AssertionError` if the data do not match.
+
+	:param in_process: The :class:`~sklearn.tree.DecisionTreeClassifier` already in memory.
+	:param from_file: A :class:`~sklearn.tree.DecisionTreeClassifier` loaded from disk.
+
+	:rtype:
+
+	.. versionadded:: 0.7.0
+	"""
+
+	a, b = in_process, from_file
+	assert a.ccp_alpha == b.ccp_alpha, (a.ccp_alpha, b.ccp_alpha)
+	assert a.class_weight == b.class_weight, (a.class_weight, b.class_weight)
+	assert numpy.array_equal(a.classes_, b.classes_), (a.classes_, b.classes_)
+	assert a.criterion == b.criterion, (a.criterion, b.criterion)
+	assert a.max_depth == b.max_depth, (a.max_depth, b.max_depth)
+	assert a.max_features == b.max_features, (a.max_features, b.max_features)
+	assert a.max_features_ == b.max_features_, (a.max_features_, b.max_features_)
+	assert a.max_leaf_nodes == b.max_leaf_nodes, (a.max_leaf_nodes, b.max_leaf_nodes)
+	assert a.min_impurity_decrease == b.min_impurity_decrease, (a.min_impurity_decrease, b.min_impurity_decrease)
+	assert a.min_samples_leaf == b.min_samples_leaf, (a.min_samples_leaf, b.min_samples_leaf)
+	assert a.min_samples_split == b.min_samples_split, (a.min_samples_split, b.min_samples_split)
+	assert a.min_weight_fraction_leaf == b.min_weight_fraction_leaf, (
+			a.min_weight_fraction_leaf, b.min_weight_fraction_leaf
+			)
+	assert a.n_classes_ == b.n_classes_, (a.n_classes_, b.n_classes_)
+	assert a.n_features_in_ == b.n_features_in_, (a.n_features_in_, b.n_features_in_)
+	assert a.n_outputs_ == b.n_outputs_, (a.n_outputs_, b.n_outputs_)
+	assert a.random_state == b.random_state, (a.random_state, b.random_state)
+	assert a.splitter == b.splitter, (a.splitter, b.splitter)
+	a_tree = a.tree_.__getstate__()
+	b_tree = b.tree_.__getstate__()
+	assert a_tree["max_depth"] == b_tree["max_depth"], (a_tree["max_depth"], b_tree["max_depth"])
+	assert a_tree["node_count"] == b_tree["node_count"], (a_tree["node_count"], b_tree["node_count"])
+	assert numpy.array_equal(a_tree["nodes"], b_tree["nodes"]), (a_tree["nodes"], b_tree["nodes"])
+
+
+def verify_saved_random_forest(
+		in_process: RandomForestClassifier,
+		from_file: RandomForestClassifier,
+		) -> None:
+	"""
+	Verify the saved :class:`~sklearn.ensemble.RandomForestClassifier` matches the model in memory.
+
+	Will raise an :exc:`AssertionError` if the data do not match.
+
+	:param in_process: The :class:`~sklearn.ensemble.RandomForestClassifier` already in memory.
+	:param from_file: A :class:`~sklearn.ensemble.RandomForestClassifier` loaded from disk.
+
+	:rtype:
+
+	.. versionadded:: 0.7.0
+	"""
+
+	a, b = in_process, from_file
+	assert a.max_depth == b.max_depth, (a.max_depth, b.max_depth)
+	assert a.max_features == b.max_features, (a.max_features, b.max_features)
+	assert a.max_leaf_nodes == b.max_leaf_nodes, (a.max_leaf_nodes, b.max_leaf_nodes)
+	assert a.max_samples == b.max_samples, (a.max_samples, b.max_samples)
+	assert a.min_impurity_decrease == b.min_impurity_decrease, (a.min_impurity_decrease, b.min_impurity_decrease)
+	assert a.min_samples_leaf == b.min_samples_leaf, (a.min_samples_leaf, b.min_samples_leaf)
+	assert a.min_samples_split == b.min_samples_split, (a.min_samples_split, b.min_samples_split)
+	assert a.min_weight_fraction_leaf == b.min_weight_fraction_leaf, (
+			a.min_weight_fraction_leaf, b.min_weight_fraction_leaf
+			)
+	assert a.n_classes_ == b.n_classes_, (a.n_classes_, b.n_classes_)
+	assert a.n_estimators == b.n_estimators, (a.n_estimators, b.n_estimators)
+	assert a.n_features_in_ == b.n_features_in_, (a.n_features_in_, b.n_features_in_)
+	assert a.n_jobs == b.n_jobs, (a.n_jobs, b.n_jobs)
+	assert a.n_outputs_ == b.n_outputs_, (a.n_outputs_, b.n_outputs_)
+	assert a.oob_score == b.oob_score, (a.oob_score, b.oob_score)
+	assert a.random_state == b.random_state, (a.random_state, b.random_state)
+	assert a.verbose == b.verbose, (a.verbose, b.verbose)
+	assert a.warm_start == b.warm_start, (a.warm_start, b.warm_start)
+	if hasattr(a, "feature_names_in_") or hasattr(b, "feature_names_in_"):
+		assert a.feature_names_in_ == b.feature_names_in_, (a.feature_names_in_, b.feature_names_in_)
+	for a_tree, b_tree in zip(a.estimators_, b.estimators_):
+		verify_saved_decision_tree(a_tree, b_tree)
