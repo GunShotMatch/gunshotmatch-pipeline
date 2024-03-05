@@ -37,10 +37,9 @@ from domdf_python_tools.paths import PathPlus
 from domdf_python_tools.typing import PathLike
 from libgunshotmatch.datafile import Datafile, Repeat, get_info_from_gcms_data
 from libgunshotmatch.method import Method
-from libgunshotmatch.peak import PeakList
 from libgunshotmatch.project import Project
 from libgunshotmatch.search import identify_peaks
-from pyms.GCMS.Class import GCMS_data  # type: ignore[import]
+from pyms.GCMS.Class import GCMS_data
 
 # this package
 from gunshotmatch_pipeline.peaks import align_and_filter_peaks, prepare_peak_list
@@ -58,7 +57,7 @@ def prepare_datafile(
 		filename: PathLike,
 		method: Method,
 		verbose: bool = False,
-		) -> Tuple[Repeat, PeakList]:
+		) -> Tuple[Repeat, GCMS_data]:
 	"""
 	Pipeline from raw datafile to a :class:`~libgunshotmatch.datafile.Datafile`.
 
@@ -111,7 +110,7 @@ def project_from_repeats(
 	# for repeat in repeats:
 	# 	datafile_data[repeat.name] = repeat
 
-	project = Project(name=name, alignment=None, datafile_data=datafile_data)
+	project = Project(name=name, alignment=None, datafile_data=datafile_data)  # type: ignore[arg-type]
 	print(project)
 
 	# print("\n=================")

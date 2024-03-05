@@ -29,7 +29,7 @@ Metadata and pipeline for unknown samples.
 # stdlib
 import json
 from operator import itemgetter
-from typing import Dict, Type
+from typing import Dict, List, Tuple, Type
 
 # 3rd party
 import attr
@@ -44,8 +44,8 @@ from libgunshotmatch.method._fields import String
 from libgunshotmatch.project import Project
 from libgunshotmatch.search import identify_peaks
 from libgunshotmatch.utils import _fix_init_annotations
-from pyms.DPA.Alignment import exprl2alignment  # type: ignore[import]
-from pyms.Experiment import Experiment  # type: ignore[import]
+from pyms.DPA.Alignment import exprl2alignment
+from pyms.Experiment import Experiment
 
 # this package
 from gunshotmatch_pipeline import prepare_datafile
@@ -139,7 +139,10 @@ def filter_and_identify_peaks(
 	top_n_peaks = method.alignment.top_n_peaks
 	min_peak_area = method.alignment.min_peak_area
 
-	peak_index_area_map = [(peak.area, peak.rt) for peak in repeat.peaks]
+	peak_index_area_map: List[Tuple[float, float]] = []
+	for peak in repeat.peaks:
+		assert peak.area is not None
+		peak_index_area_map.append((peak.area, peak.rt))
 
 	if top_n_peaks:  # If ``0`` all peaks are included.
 		print(f"Filtering to the largest {top_n_peaks} peaks with a peak area above {min_peak_area}")
