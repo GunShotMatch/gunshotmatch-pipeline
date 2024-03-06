@@ -154,6 +154,7 @@ Contents
 .. sidebar-links::
 	:caption: Links
 	:github:
+	:pypi: gunshotmatch-pipeline
 
 
 .. start links

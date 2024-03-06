@@ -41,11 +41,11 @@ from sklearn.tree import DecisionTreeClassifier  # type: ignore[import]
 from sklearn.tree._tree import Tree  # type: ignore[import]
 
 __all__ = [
-		"deserialise_decision_tree",
-		"deserialise_random_forest",
 		"serialise_decision_tree",
-		"serialise_random_forest",
+		"deserialise_decision_tree",
 		"verify_saved_decision_tree",
+		"serialise_random_forest",
+		"deserialise_random_forest",
 		"verify_saved_random_forest",
 		]
 
@@ -235,6 +235,7 @@ def verify_saved_decision_tree(
 	:rtype:
 
 	.. versionadded:: 0.7.0
+	.. latex:clearpage::
 	"""
 
 	a, b = in_process, from_file

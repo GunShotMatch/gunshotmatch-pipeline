@@ -10,3 +10,4 @@
 ==================================================
 
 .. automodule:: gunshotmatch_pipeline.decision_tree.export
+	:member-order: bysource
