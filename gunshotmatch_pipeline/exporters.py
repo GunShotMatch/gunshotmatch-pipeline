@@ -84,7 +84,7 @@ def verify_saved_project(in_process: Project, from_file: Project) -> None:
 	assert in_process.name == from_file.name
 	assert in_process.alignment.peakpos == from_file.alignment.peakpos
 	assert in_process.alignment.expr_code == from_file.alignment.expr_code
-	assert array_equal(in_process.alignment.peakalgt, from_file.alignment.peakalgt)
+	assert array_equal(in_process.alignment.peakalgt, from_file.alignment.peakalgt)  # type: ignore[arg-type]
 	assert in_process.alignment.similarity == from_file.alignment.similarity
 	assert in_process.datafile_data.keys() == from_file.datafile_data.keys()
 
@@ -139,6 +139,7 @@ def write_combined_csv(repeat: Repeat, output_dir: PathPlus) -> None:
 		combine_csv.write(f"{repeat.datafile.name}\n{csv_header_row}\n")
 
 		def to_csv(peak: QualifiedPeak) -> List[List[str]]:
+			assert peak.area is not None
 			area = f"{peak.area / 60:,}"
 			csv = [[str(peak.rt / 60), area, '', '', '', '', '', '']]
 			for hit in peak.hits:
