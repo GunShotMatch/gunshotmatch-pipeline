@@ -227,6 +227,8 @@ def dotsafe_name(name: str) -> str:
 	:rtype:
 
 	.. versionadded:: 0.5.0
+
+	.. latex:clearpage::
 	"""
 
 	return name.translate(_dotsafe_transmap)
