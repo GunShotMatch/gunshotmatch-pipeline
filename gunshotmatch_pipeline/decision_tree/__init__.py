@@ -32,9 +32,10 @@ Prepare data and train decision trees.
 import string
 from statistics import mean, stdev
 from string import ascii_lowercase
-from typing import Collection, List, Tuple
+from typing import Collection, List, Tuple, Type
 
 # 3rd party
+import attr
 import graphviz  # type: ignore[import]
 import pandas  # type: ignore[import]
 import sklearn.tree  # type: ignore[import]
@@ -56,6 +57,7 @@ __all__ = (
 		"fit_decision_tree",
 		"simulate_data",
 		"visualise_decision_tree",
+		"DecisionTreeVisualiser",
 		"get_feature_names",
 		"data_from_unknown",
 		"dotsafe_name",
@@ -247,31 +249,94 @@ def visualise_decision_tree(
 	:param filetype: Output filetype (e.g. svg, png, pdf).
 	"""
 
-	# TODO: handle PathLike for filename
+	visualiser = DecisionTreeVisualiser.from_data(data, classifier, factorize_map)
+	return visualiser.visualise_tree(filename, filetype)
 
-	feature_names = get_feature_names(data)
 
-	def vis_tree(tree: ClassifierMixin, filename: str) -> None:
-		# Get text representation of decision tree
-		# text_representation = sklearn.tree.export_text(tree, feature_names=feature_names)
-		# print(text_representation)
+@attr.define
+class DecisionTreeVisualiser:
+	"""
+	Class for exporting visualisations of a decision tree or random forest.
 
+	.. versionadded:: 0.8.0
+	"""
+
+	#: Decision tree or random forest classifier.
+	classifier: ClassifierMixin
+
+	#: The compounds the decision tree was trained on.
+	feature_names: List[str]
+
+	#: List of class names in the order they appear as classes in the classifier.
+	factorize_map: List[str] = attr.field(on_setattr=attr.setters.validate)
+
+	# Cached names for graphvis
+	_dotsafe_class_names: List[str] = attr.field(init=False, default=None)
+
+	@factorize_map.validator
+	def _dotsafe_factorize_map(self, attribute: attr.Attribute, value: List[str]) -> None:
+		self._dotsafe_class_names = list(map(dotsafe_name, value))
+
+	@classmethod
+	def from_data(
+			cls: Type["DecisionTreeVisualiser"],
+			data: pandas.DataFrame,
+			classifier: ClassifierMixin,
+			factorize_map: List[str],
+			) -> "DecisionTreeVisualiser":
+		"""
+		Alternative constructor from the pandas dataframe the classifier was trained on.
+		"""
+
+		feature_names = get_feature_names(data)
+		return cls(classifier, feature_names, factorize_map)
+
+	# def get_text_tree(self) -> str:
+	# 	"""
+	# 	Return a text representation of the tree.
+	# 	"""
+
+	# 	if isinstance(self.classifier, RandomForestClassifier):
+	# 		raise NotImplementedError
+	# 	else:
+	# 		# Get text representation of decision tree
+	# 		return sklearn.tree.export_text(self.classifier, feature_names=self.feature_names)
+
+	def _get_graphviz(self, tree: ClassifierMixin) -> graphviz.Source:
 		# DOT data
 		dot_data = sklearn.tree.export_graphviz(
 				tree,
 				out_file=None,
-				feature_names=feature_names,
-				class_names=list(map(dotsafe_name, factorize_map)),
+				feature_names=self.feature_names,
+				class_names=self._dotsafe_class_names,
 				filled=True,
 				special_characters=True,
 				)
 
-		# Draw graph
-		graph = graphviz.Source(dot_data)
-		graph.render(f"{filename}.dot", outfile=f"{filename}.{filetype}", format=filetype)
+		return graphviz.Source(dot_data)
 
-	if isinstance(classifier, RandomForestClassifier):
-		for idx, tree in enumerate(classifier.estimators_):
-			vis_tree(tree, f"{filename}-tree-{idx}")
-	else:
-		vis_tree(classifier, filename=filename)
+	def visualise_tree(
+			self,
+			filename: str = "decision_tree_graphivz",
+			filetype: str = "svg",
+			) -> None:
+		"""
+		Visualise the decision tree or random forest as an image.
+
+		:param filename: Output filename without extension; for random forest, the base filename (followed by ``-tree-n``).
+		:param filetype: Output filetype (e.g. svg, png, pdf).
+		"""
+
+		# TODO: handle PathLike for filename
+
+		if isinstance(self.classifier, RandomForestClassifier):
+			for idx, tree in enumerate(self.classifier.estimators_):
+				graph = self._get_graphviz(tree)
+				graph.render(
+						f"{filename}-tree-{idx}.dot",
+						outfile=f"{filename}-tree-{idx}.{filetype}",
+						format=filetype,
+						)
+		else:
+			graph = self._get_graphviz(self.classifier)
+			graph.render(f"{filename}.dot", outfile=f"{filename}.{filetype}", format=filetype)
