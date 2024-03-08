@@ -91,7 +91,7 @@ gunshotmatch-pipeline
 .. |language| image:: https://img.shields.io/github/languages/top/GunShotMatch/gunshotmatch-pipeline
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/GunShotMatch/gunshotmatch-pipeline/v0.8.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/GunShotMatch/gunshotmatch-pipeline/v0.8.1
 	:target: https://github.com/GunShotMatch/gunshotmatch-pipeline/pulse
 	:alt: GitHub commits since tagged version
 
