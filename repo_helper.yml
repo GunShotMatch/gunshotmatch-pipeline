@@ -49,3 +49,12 @@ github_ci_requirements:
   post:
    - sudo apt update
    - sudo apt install graphviz
+ Windows:
+  post:
+   - choco install graphviz
+  #  - "\r      - uses: ts-graphviz/setup-graphviz@v2"
+  #  - "\r        name: Setup Graphviz"
+ macOS:
+  post:
+   - brew update
+   - brew install graphviz
