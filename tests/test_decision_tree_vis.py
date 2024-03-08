@@ -2,7 +2,7 @@
 from typing import List, Tuple
 
 # 3rd party
-from coincidence.regressions import AdvancedDataRegressionFixture
+from coincidence.regressions import AdvancedDataRegressionFixture, AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
 from sklearn.ensemble import RandomForestClassifier  # type: ignore[import]
 
@@ -21,7 +21,11 @@ def load_classifier(filename: PathPlus) -> Tuple[RandomForestClassifier, List[st
 	return classifier, factorize_map, feature_names
 
 
-def test_graphviz_export(tmp_pathplus: PathPlus, advanced_data_regression: AdvancedDataRegressionFixture):
+def test_graphviz_export(
+		tmp_pathplus: PathPlus,
+		advanced_data_regression: AdvancedDataRegressionFixture,
+		advanced_file_regression: AdvancedFileRegressionFixture,
+		):
 	classifier, factorize_map, feature_names = load_classifier(PathPlus("tests/decision-tree.json"))
 
 	dtv = DecisionTreeVisualiser(classifier, feature_names, factorize_map)
@@ -36,3 +40,6 @@ def test_graphviz_export(tmp_pathplus: PathPlus, advanced_data_regression: Advan
 			"_dotsafe_class_names": dtv._dotsafe_class_names,
 			"output_files": output_files,
 			})
+
+	for file in output_files:
+		advanced_file_regression.check_file(tmp_pathplus / file, extension=f".{file}")

@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Propanal, 2-methyl-3-phenyl- &le; 3034013.25<br/>gini = 0.824<br/>samples = 21<br/>value = [4, 5, 8, 2, 3, 2, 4]<br/>class = Gamebore Clear Pigeon>] ;
+1 [label=<2,6-DNT &le; 14821446.0<br/>gini = 0.786<br/>samples = 18<br/>value = [4, 0, 8, 2, 3, 2, 4]<br/>class = Gamebore Clear Pigeon>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<2-Nonen-1-ol &le; 2600873.75<br/>gini = 0.544<br/>samples = 9<br/>value = [0, 0, 8, 2, 3, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+1 -> 2 ;
+3 [label=<Diethyl Phthalate &le; 43179832.0<br/>gini = 0.32<br/>samples = 6<br/>value = [0, 0, 8, 2, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+2 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 8, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 2, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+3 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 3, 0, 0]<br/>class = Remington RXP>] ;
+2 -> 6 ;
+7 [label=<Dimethyl phthalate &le; 8465967.0<br/>gini = 0.64<br/>samples = 9<br/>value = [4, 0, 0, 0, 0, 2, 4]<br/>class = Eley Hymax>] ;
+1 -> 7 ;
+8 [label=<Hexadecen-1-ol, trans-9- &le; 200952320.0<br/>gini = 0.444<br/>samples = 5<br/>value = [4, 0, 0, 0, 0, 2, 0]<br/>class = Eley Hymax>] ;
+7 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 2, 0]<br/>class = Ward Thompson Classic>] ;
+8 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [4, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+8 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 0, 0, 4]<br/>class = Western Double A>] ;
+7 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 5, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

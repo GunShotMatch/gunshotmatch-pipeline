@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Heneicosane &le; 3001241472.0<br/>gini = 0.829<br/>samples = 17<br/>value = [4, 4, 8, 2, 3, 3, 4]<br/>class = Gamebore Clear Pigeon>] ;
+1 [label=<2,5-Cyclohexadiene-1,4-dione, 2,6-bis(1,1-dimethylethyl)- &le; 459735184.0<br/>gini = 0.825<br/>samples = 14<br/>value = [4, 4, 0, 2, 3, 3, 4]<br/>class = Eley Hymax>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Heptadecane &le; 556606720.0<br/>gini = 0.789<br/>samples = 12<br/>value = [4, 0, 0, 2, 3, 3, 4]<br/>class = Eley Hymax>] ;
+1 -> 2 ;
+3 [label=<1H-Indene, 1-methylene- &le; 4948006.0<br/>gini = 0.736<br/>samples = 9<br/>value = [0, 0, 0, 2, 3, 3, 4]<br/>class = Western Double A>] ;
+2 -> 3 ;
+4 [label=<1,4-Butanediol, dinitrate &le; 257308832.0<br/>gini = 0.642<br/>samples = 6<br/>value = [0, 0, 0, 2, 3, 0, 4]<br/>class = Western Double A>] ;
+3 -> 4 ;
+5 [label=<Diphenylamine &le; 2520624384.0<br/>gini = 0.48<br/>samples = 3<br/>value = [0, 0, 0, 2, 3, 0, 0]<br/>class = Remington RXP>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 3, 0, 0]<br/>class = Remington RXP>] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 2, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+5 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 0, 4]<br/>class = Western Double A>] ;
+4 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 3, 0]<br/>class = Ward Thompson Classic>] ;
+3 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [4, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 4, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 8, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<2,5-Cyclohexadiene-1,4-dione, 2,5-diphenyl- &le; 339462080.0<br/>gini = 0.773<br/>samples = 16<br/>value = [4, 9, 7, 0, 4, 0, 4]<br/>class = Eley Super Game>] ;
+1 [label=<Nonanal &le; 24907404.0<br/>gini = 0.719<br/>samples = 13<br/>value = [4, 9, 7, 0, 0, 0, 4]<br/>class = Eley Super Game>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 7, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+1 -> 2 ;
+3 [label=<Tetradecane, 2,6,10-trimethyl- &le; 71979512.0<br/>gini = 0.609<br/>samples = 9<br/>value = [4, 9, 0, 0, 0, 0, 4]<br/>class = Eley Super Game>] ;
+1 -> 3 ;
+4 [label=<2-Nitrophenol &le; 64545816.0<br/>gini = 0.5<br/>samples = 6<br/>value = [4, 0, 0, 0, 0, 0, 4]<br/>class = Eley Hymax>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 0, 4]<br/>class = Western Double A>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 3<br/>value = [4, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 9, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 4, 0, 0]<br/>class = Remington RXP>] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

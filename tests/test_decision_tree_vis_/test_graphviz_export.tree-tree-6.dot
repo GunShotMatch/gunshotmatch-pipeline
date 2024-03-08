@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Phenol, 2,4-bis(1,1-dimethylethyl)- &le; 36504212.0<br/>gini = 0.824<br/>samples = 17<br/>value = [4, 1, 3, 6, 6, 6, 2]<br/>class = Holland &amp; Holland Super Twelve>] ;
+1 [label=<1H-Indene, 1-methylene- &le; 4948006.0<br/>gini = 0.789<br/>samples = 14<br/>value = [4, 1, 3, 0, 6, 6, 2]<br/>class = Remington RXP>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Octadecane, 3-ethyl-5-(2-ethylbutyl)- &le; 44892128.0<br/>gini = 0.711<br/>samples = 10<br/>value = [4, 0, 3, 0, 6, 0, 2]<br/>class = Remington RXP>] ;
+1 -> 2 ;
+3 [label=<2,5-Furandione, dihydro-3-methylene- &le; 53522520.0<br/>gini = 0.642<br/>samples = 7<br/>value = [4, 0, 3, 0, 0, 0, 2]<br/>class = Eley Hymax>] ;
+2 -> 3 ;
+4 [label=<2,5-Cyclohexadiene-1,4-dione, 2,6-bis(1,1-dimethylethyl)- &le; 14872248.0<br/>gini = 0.48<br/>samples = 4<br/>value = [0, 0, 3, 0, 0, 0, 2]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 3, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 0, 2]<br/>class = Western Double A>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 3<br/>value = [4, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 6, 0, 0]<br/>class = Remington RXP>] ;
+2 -> 8 ;
+9 [label=<Furfural &le; 305996608.0<br/>gini = 0.245<br/>samples = 4<br/>value = [0, 1, 0, 0, 0, 6, 0]<br/>class = Ward Thompson Classic>] ;
+1 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 6, 0]<br/>class = Ward Thompson Classic>] ;
+9 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+9 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 6, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
