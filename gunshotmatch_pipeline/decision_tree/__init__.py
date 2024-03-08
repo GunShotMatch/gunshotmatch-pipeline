@@ -311,7 +311,7 @@ class DecisionTreeVisualiser:
 				out_file=None,
 				feature_names=self.feature_names,
 				class_names=self._dotsafe_class_names,
-				filled=True,
+				filled=False,
 				special_characters=True,
 				)
 
