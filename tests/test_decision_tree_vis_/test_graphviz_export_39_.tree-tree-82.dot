@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<2,5-Furandione, 3-(1,1-dimethylethyl)- &le; 9078787.0<br/>gini = 0.816<br/>samples = 18<br/>value = [112, 252, 84, 84, 56, 84, 112]<br/>class = Eley Super Game>] ;
+1 [label=<Cyclohexane, 1,4-dimethyl-2-octadecyl- &le; 31707878.0<br/>gini = 0.791<br/>samples = 11<br/>value = [0, 0, 45, 45, 30, 45, 60]<br/>class = Western Double A>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Benzene, (1-methyldodecyl)- &le; 35373656.0<br/>gini = 0.744<br/>samples = 9<br/>value = [0, 0, 33, 33, 22, 33, 0]<br/>class = Gamebore Clear Pigeon>] ;
+1 -> 2 ;
+3 [label=<1H-Inden-1-one, 2,3-dihydro- &le; 15614688.0<br/>gini = 0.656<br/>samples = 7<br/>value = [0, 0, 24, 24, 16, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+2 -> 3 ;
+4 [label=<Dodecyl acrylate &le; 119812640.0<br/>gini = 0.48<br/>samples = 4<br/>value = [0, 0, 15, 0, 10, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 9, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 4, 0, 0]<br/>class = Remington RXP>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 9, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 9, 0]<br/>class = Ward Thompson Classic>] ;
+2 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 0, 16]<br/>class = Western Double A>] ;
+1 -> 9 ;
+10 [label=<Propanal, 2-methyl-3-phenyl- &le; 3034013.25<br/>gini = 0.426<br/>samples = 7<br/>value = [52, 117, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+0 -> 10 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+11 [label=<gini = 0.0<br/>samples = 3<br/>value = [16, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+10 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 81, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+10 -> 12 ;
+}

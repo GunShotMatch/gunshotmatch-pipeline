@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Benzene, 1,2,4-trimethyl- &le; 35555388.0<br/>gini = 0.844<br/>samples = 20<br/>value = [112, 168, 112, 84, 56, 112, 140]<br/>class = Eley Super Game>] ;
+1 [label=<2-Cyclopentene-1,4-dione &le; 9746824.0<br/>gini = 0.822<br/>samples = 16<br/>value = [88, 0, 88, 66, 44, 88, 110]<br/>class = Western Double A>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Carbamoyl chloride, phenyl- &le; 66740328.0<br/>gini = 0.735<br/>samples = 11<br/>value = [56, 0, 56, 0, 28, 56, 0]<br/>class = Eley Hymax>] ;
+1 -> 2 ;
+3 [label=<Ethanol, 2-(2-butoxyethoxy)-, acetate &le; 3238111.0<br/>gini = 0.64<br/>samples = 8<br/>value = [0, 0, 40, 0, 20, 40, 0]<br/>class = Gamebore Clear Pigeon>] ;
+2 -> 3 ;
+4 [label=<Hexadecen-1-ol, trans-9- &le; 13514702.0<br/>gini = 0.444<br/>samples = 4<br/>value = [0, 0, 24, 0, 12, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 16, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 4, 0, 0]<br/>class = Remington RXP>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 0, 16, 0]<br/>class = Ward Thompson Classic>] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [16, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+2 -> 8 ;
+9 [label=<1,6-Anhydro-β-D-glucopyranose (levoglucosan) &le; 204518544.0<br/>gini = 0.469<br/>samples = 5<br/>value = [0, 0, 0, 24, 0, 0, 40]<br/>class = Western Double A>] ;
+1 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 0, 25]<br/>class = Western Double A>] ;
+9 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 9, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+9 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 36, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

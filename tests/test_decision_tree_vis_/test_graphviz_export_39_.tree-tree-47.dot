@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<1-Tridecanol &le; 4347778.0<br/>gini = 0.804<br/>samples = 17<br/>value = [28, 140, 84, 140, 56, 84, 252]<br/>class = Western Double A>] ;
+1 [label=<1,6-Anhydro-β-D-glucopyranose (levoglucosan) &le; 48946508.0<br/>gini = 0.798<br/>samples = 14<br/>value = [19, 95, 57, 95, 38, 57, 0]<br/>class = Eley Super Game>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Heptadecane, 3-methyl- &le; 63701736.0<br/>gini = 0.755<br/>samples = 10<br/>value = [14, 70, 42, 0, 28, 42, 0]<br/>class = Eley Super Game>] ;
+1 -> 2 ;
+3 [label=<3-Eicosene, (E)- &le; 186285328.0<br/>gini = 0.716<br/>samples = 8<br/>value = [9, 0, 27, 0, 18, 27, 0]<br/>class = Gamebore Clear Pigeon>] ;
+2 -> 3 ;
+4 [label=<2,5-Cyclohexadiene-1,4-dione, 2,6-bis(1,1-dimethylethyl)- &le; 15436241.0<br/>gini = 0.611<br/>samples = 5<br/>value = [6, 0, 18, 0, 12, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 9, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<Octadecane, 3-ethyl-5-(2-ethylbutyl)- &le; 22897136.0<br/>gini = 0.444<br/>samples = 3<br/>value = [3, 0, 0, 0, 6, 0, 0]<br/>class = Remington RXP>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 1<br/>value = [1, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+6 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 4, 0, 0]<br/>class = Remington RXP>] ;
+6 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 9, 0]<br/>class = Ward Thompson Classic>] ;
+3 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 25, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 25, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 0, 81]<br/>class = Western Double A>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

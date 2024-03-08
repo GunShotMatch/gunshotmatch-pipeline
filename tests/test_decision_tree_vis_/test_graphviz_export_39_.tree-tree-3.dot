@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<2,3-DNT &le; 2210247.75<br/>gini = 0.852<br/>samples = 22<br/>value = [112, 140, 84, 112, 112, 140, 84]<br/>class = Eley Super Game>] ;
+1 [label=<p-Benzoquinone &le; 26660090.0<br/>gini = 0.828<br/>samples = 18<br/>value = [92, 115, 69, 92, 92, 0, 69]<br/>class = Eley Super Game>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<2-Nonen-1-ol &le; 2600873.75<br/>gini = 0.745<br/>samples = 11<br/>value = [0, 0, 42, 56, 56, 0, 42]<br/>class = Holland &amp; Holland Super Twelve>] ;
+1 -> 2 ;
+3 [label=<1,2,4-Metheno-3H-cyclobuta[cd]pentalen-3-one, octahydro- &le; 5420818.0<br/>gini = 0.66<br/>samples = 7<br/>value = [0, 0, 30, 40, 0, 0, 30]<br/>class = Holland &amp; Holland Super Twelve>] ;
+2 -> 3 ;
+4 [label=<N-Nitroso-N-ethylaniline &le; 4275536.0<br/>gini = 0.5<br/>samples = 5<br/>value = [0, 0, 18, 0, 0, 0, 18]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 9, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 0, 9]<br/>class = Western Double A>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 16, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 16, 0, 0]<br/>class = Remington RXP>] ;
+2 -> 8 ;
+9 [label=<Heptadecane, 3-methyl- &le; 63701736.0<br/>gini = 0.494<br/>samples = 7<br/>value = [36, 45, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+1 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [16, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+9 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 25, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+9 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 0, 25, 0]<br/>class = Ward Thompson Classic>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

@@ -1,7 +1,9 @@
 # stdlib
+import sys
 from typing import List, Tuple
 
 # 3rd party
+import pytest
 from coincidence.regressions import AdvancedDataRegressionFixture, AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
 from sklearn.ensemble import RandomForestClassifier  # type: ignore[import]
@@ -21,6 +23,25 @@ def load_classifier(filename: PathPlus) -> Tuple[RandomForestClassifier, List[st
 	return classifier, factorize_map, feature_names
 
 
+@pytest.mark.flaky(reruns=100)
+@pytest.mark.parametrize(
+		"py_version",
+		[
+				pytest.param(
+						"38",
+						marks=pytest.mark.skipif(
+								sys.version_info[:2] != (3, 8), reason="sklearn output differs on Python 3.8"
+								)
+						),
+				pytest.param(
+						"39",
+						marks=pytest.mark.skipif(
+								sys.version_info[:2] == (3, 8), reason="sklearn output differs on Python 3.8"
+								)
+						),
+				]
+		)
+@pytest.mark.usefixtures("py_version")
 def test_graphviz_export(
 		tmp_pathplus: PathPlus,
 		advanced_data_regression: AdvancedDataRegressionFixture,

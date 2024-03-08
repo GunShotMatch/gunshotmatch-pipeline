@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Benzene, isocyanato- &le; 6821675.5<br/>gini = 0.821<br/>samples = 17<br/>value = [84, 84, 112, 112, 140, 224, 28]<br/>class = Ward Thompson Classic>] ;
+1 [label=<3-Methylbenzyl alcohol &le; 9797073.0<br/>gini = 0.81<br/>samples = 14<br/>value = [60, 60, 80, 80, 100, 0, 20]<br/>class = Remington RXP>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Carbamoyl chloride, phenyl- &le; 3799240.75<br/>gini = 0.766<br/>samples = 12<br/>value = [48, 48, 64, 0, 80, 0, 16]<br/>class = Remington RXP>] ;
+1 -> 2 ;
+3 [label=<Ethanol, 2-(octadecyloxy)- &le; 1552790.25<br/>gini = 0.494<br/>samples = 6<br/>value = [0, 0, 36, 0, 45, 0, 0]<br/>class = Remington RXP>] ;
+2 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 25, 0, 0]<br/>class = Remington RXP>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 16, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 5 ;
+6 [label=<Dodecane, 5,8-diethyl- &le; 5981233.5<br/>gini = 0.612<br/>samples = 6<br/>value = [21, 21, 0, 0, 0, 0, 7]<br/>class = Eley Hymax>] ;
+2 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 9, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+6 -> 7 ;
+8 [label=<1,2-Benzenedicarboxylic acid, butyl 2-ethylhexyl ester &le; 74120752.0<br/>gini = 0.375<br/>samples = 3<br/>value = [12, 0, 0, 0, 0, 0, 4]<br/>class = Eley Hymax>] ;
+6 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 0, 0, 1]<br/>class = Western Double A>] ;
+8 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 2<br/>value = [9, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+8 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 16, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 64, 0]<br/>class = Ward Thompson Classic>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

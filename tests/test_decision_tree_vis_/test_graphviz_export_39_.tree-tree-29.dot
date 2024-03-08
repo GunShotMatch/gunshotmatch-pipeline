@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Octadecane, 3-ethyl-5-(2-ethylbutyl)- &le; 42262360.0<br/>gini = 0.827<br/>samples = 18<br/>value = [140, 112, 56, 84, 224, 84, 84]<br/>class = Remington RXP>] ;
+1 [label=<Sulfur &le; 33298764.0<br/>gini = 0.82<br/>samples = 14<br/>value = [100, 80, 40, 60, 0, 60, 60]<br/>class = Eley Hymax>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<1,4-Butanediol, dinitrate &le; 1424771392.0<br/>gini = 0.791<br/>samples = 11<br/>value = [0, 60, 30, 45, 0, 45, 45]<br/>class = Eley Super Game>] ;
+1 -> 2 ;
+3 [label=<N-Nitroso-N-ethylaniline &le; 4955967.0<br/>gini = 0.744<br/>samples = 8<br/>value = [0, 0, 22, 33, 0, 33, 33]<br/>class = Holland &amp; Holland Super Twelve>] ;
+2 -> 3 ;
+4 [label=<Heneicosane, 11-(1-ethylpropyl)- &le; 22516194.0<br/>gini = 0.656<br/>samples = 7<br/>value = [0, 0, 16, 24, 0, 24, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 9, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+4 -> 5 ;
+6 [label=<2,3-DNT &le; 2210247.75<br/>gini = 0.48<br/>samples = 4<br/>value = [0, 0, 10, 0, 0, 15, 0]<br/>class = Ward Thompson Classic>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 4, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+6 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 9, 0]<br/>class = Ward Thompson Classic>] ;
+6 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 0, 0, 9]<br/>class = Western Double A>] ;
+3 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 16, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 3<br/>value = [25, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 64, 0, 0]<br/>class = Remington RXP>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

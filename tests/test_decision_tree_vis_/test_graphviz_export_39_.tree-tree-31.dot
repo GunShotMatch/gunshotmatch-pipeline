@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<γ Dodecalactone &le; 17139734.0<br/>gini = 0.824<br/>samples = 18<br/>value = [112, 56, 56, 224, 140, 112, 84]<br/>class = Holland &amp; Holland Super Twelve>] ;
+1 [label=<Dibutyl phthalate &le; 1699206592.0<br/>gini = 0.815<br/>samples = 14<br/>value = [80, 40, 40, 0, 100, 80, 60]<br/>class = Remington RXP>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<1,3-Dioxolane-2-heptanenitrile, α-methyl-δ-oxo-2-phenyl- &le; 18501490.0<br/>gini = 0.773<br/>samples = 12<br/>value = [64, 32, 32, 0, 80, 0, 48]<br/>class = Remington RXP>] ;
+1 -> 2 ;
+3 [label=<Maleic anhydride &le; 24421736.0<br/>gini = 0.727<br/>samples = 9<br/>value = [44, 22, 22, 0, 0, 0, 33]<br/>class = Eley Hymax>] ;
+2 -> 3 ;
+4 [label=<N-Nitroso-N-ethylaniline &le; 4275536.0<br/>gini = 0.653<br/>samples = 6<br/>value = [0, 14, 14, 0, 0, 0, 21]<br/>class = Western Double A>] ;
+3 -> 4 ;
+5 [label=<Benzene, 1,2,4-trimethyl- &le; 44185360.0<br/>gini = 0.5<br/>samples = 4<br/>value = [0, 8, 8, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 4, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 4, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+5 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 0, 9]<br/>class = Western Double A>] ;
+4 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 3<br/>value = [16, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+3 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 25, 0, 0]<br/>class = Remington RXP>] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 16, 0]<br/>class = Ward Thompson Classic>] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 64, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

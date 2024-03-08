@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Octadecane, 1-chloro- &le; 51262340.0<br/>gini = 0.834<br/>samples = 18<br/>value = [168, 56, 112, 140, 84, 56, 168]<br/>class = Eley Hymax>] ;
+1 [label=<Cyclohexane, 1,4-dimethyl-2-octadecyl- &le; 24215536.0<br/>gini = 0.806<br/>samples = 15<br/>value = [0, 44, 88, 110, 66, 44, 132]<br/>class = Western Double A>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<1,4-Butanediol, dinitrate &le; 638172544.0<br/>gini = 0.773<br/>samples = 13<br/>value = [0, 32, 64, 80, 48, 32, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+1 -> 2 ;
+3 [label=<1H-Indole, 3-methyl- &le; 12915288.0<br/>gini = 0.653<br/>samples = 9<br/>value = [0, 0, 48, 60, 36, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+2 -> 3 ;
+4 [label=<Heneicosane, 11-(1-ethylpropyl)- &le; 46371896.0<br/>gini = 0.49<br/>samples = 6<br/>value = [0, 0, 28, 0, 21, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<Hexadecane, 1,1-bis(dodecyloxy)- &le; 65079352.0<br/>gini = 0.32<br/>samples = 4<br/>value = [0, 0, 20, 0, 5, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 16, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 1, 0, 0]<br/>class = Remington RXP>] ;
+5 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 4, 0, 0]<br/>class = Remington RXP>] ;
+4 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 25, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+3 -> 9 ;
+10 [label=<Dodecanal &le; 19530220.0<br/>gini = 0.5<br/>samples = 4<br/>value = [0, 8, 0, 0, 0, 8, 0]<br/>class = Eley Super Game>] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 4, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+10 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 4, 0]<br/>class = Ward Thompson Classic>] ;
+10 -> 12 ;
+13 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 0, 36]<br/>class = Western Double A>] ;
+1 -> 13 ;
+14 [label=<gini = 0.0<br/>samples = 3<br/>value = [36, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+0 -> 14 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

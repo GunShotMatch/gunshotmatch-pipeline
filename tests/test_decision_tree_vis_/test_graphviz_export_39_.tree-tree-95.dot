@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<N-Nitroso-N-ethylaniline &le; 4275536.0<br/>gini = 0.849<br/>samples = 18<br/>value = [112, 112, 140, 112, 56, 112, 140]<br/>class = Gamebore Clear Pigeon>] ;
+1 [label=<Heneicosane &le; 1936266496.0<br/>gini = 0.824<br/>samples = 15<br/>value = [92, 92, 115, 92, 46, 92, 0]<br/>class = Gamebore Clear Pigeon>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Ethanol, 2-(2-butoxyethoxy)- &le; 9383957.0<br/>gini = 0.735<br/>samples = 10<br/>value = [0, 56, 0, 56, 28, 56, 0]<br/>class = Eley Super Game>] ;
+1 -> 2 ;
+3 [label=<2,3-DNT &le; 4601939.5<br/>gini = 0.64<br/>samples = 7<br/>value = [0, 40, 0, 0, 20, 40, 0]<br/>class = Eley Super Game>] ;
+2 -> 3 ;
+4 [label=<Carbamoyl chloride, phenyl- &le; 47709428.0<br/>gini = 0.444<br/>samples = 5<br/>value = [0, 24, 0, 0, 12, 0, 0]<br/>class = Eley Super Game>] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 4, 0, 0]<br/>class = Remington RXP>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 16, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 0, 0, 16, 0]<br/>class = Ward Thompson Classic>] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 16, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+2 -> 8 ;
+9 [label=<4a,8a-(Methaniminomethano)naphthalene-9,11-dione, 10-phenyl- &le; 26213844.0<br/>gini = 0.494<br/>samples = 5<br/>value = [36, 0, 45, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+1 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 25, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+9 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 2<br/>value = [16, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+9 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 0, 25]<br/>class = Western Double A>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

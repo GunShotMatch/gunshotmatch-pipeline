@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<1H-Indole, 3-methyl- &le; 19359020.0<br/>gini = 0.842<br/>samples = 20<br/>value = [112, 140, 112, 140, 28, 112, 140]<br/>class = Eley Super Game>] ;
+1 [label=<6-Octadecenal &le; 34868620.0<br/>gini = 0.813<br/>samples = 17<br/>value = [92, 115, 92, 0, 23, 92, 115]<br/>class = Eley Super Game>] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<2,5-Cyclohexadiene-1,4-dione, 2,6-bis(1,1-dimethylethyl)- &le; 307177984.0<br/>gini = 0.772<br/>samples = 13<br/>value = [72, 90, 72, 0, 18, 72, 0]<br/>class = Eley Super Game>] ;
+1 -> 2 ;
+3 [label=<Oxygen difluoride &le; 34089264.0<br/>gini = 0.71<br/>samples = 10<br/>value = [52, 0, 52, 0, 13, 52, 0]<br/>class = Eley Hymax>] ;
+2 -> 3 ;
+4 [label=<1H-Indene, 1-methylene- &le; 8269094.0<br/>gini = 0.593<br/>samples = 7<br/>value = [0, 0, 36, 0, 9, 36, 0]<br/>class = Gamebore Clear Pigeon>] ;
+3 -> 4 ;
+5 [label=<Dodecyl acrylate &le; 119812640.0<br/>gini = 0.32<br/>samples = 4<br/>value = [0, 0, 20, 0, 5, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 16, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 1, 0, 0]<br/>class = Remington RXP>] ;
+5 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 16, 0]<br/>class = Ward Thompson Classic>] ;
+4 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 3<br/>value = [16, 0, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+3 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 25, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 0, 0, 25]<br/>class = Western Double A>] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 25, 0, 0, 0]<br/>class = Holland &amp; Holland Super Twelve>] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
