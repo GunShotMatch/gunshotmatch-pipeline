@@ -32,11 +32,12 @@ Prepare data and train decision trees.
 import string
 from statistics import mean, stdev
 from string import ascii_lowercase
-from typing import Collection, List, Tuple, Type
+from typing import Collection, Iterator, List, Tuple, Type
 
 # 3rd party
 import attr
 import graphviz  # type: ignore[import]
+import numpy
 import pandas  # type: ignore[import]
 import sklearn.tree  # type: ignore[import]
 from domdf_python_tools.paths import PathPlus
@@ -61,6 +62,7 @@ __all__ = (
 		"get_feature_names",
 		"data_from_unknown",
 		"dotsafe_name",
+		"predict_unknown",
 		)
 
 # Columns which don't correspond to compounds (features); i.e. metadata columns
@@ -342,3 +344,33 @@ class DecisionTreeVisualiser:
 		else:
 			graph = self._get_graphviz(self.classifier)
 			graph.render(f"{filename}.dot", outfile=f"{filename}.{filetype}", format=filetype)
+
+
+def predict_unknown(
+		unknown: UnknownSettings,
+		classifier: ClassifierMixin,
+		factorize_map: List[str],
+		feature_names: List[str],
+		) -> Iterator[Tuple[str, float]]:
+	"""
+	Predict classes for an unknown sample from a decision tree or random forest.
+
+	:param unknown:
+	:param classifier:
+	:param factorize_map: List of class names in the order they appear as classes in the classifier.
+	:param feature_names: The compounds the decision tree was trained on. Extra compounds in the unknown will be excluded.
+
+	:returns: An iterator of predicted class names and their probabilities, ranked from most to least likely.
+
+	.. versionadded:: 0.9.0
+	"""
+
+	unknown_sample = data_from_unknown(unknown, feature_names=feature_names)
+	proba = classifier.predict_proba(unknown_sample)
+	argsort = numpy.argsort(proba, axis=1)
+
+	class_names = [factorize_map[cls] for cls in reversed(argsort.tolist()[0])]
+	probabilities = sorted(classifier.predict_proba(unknown_sample)[0], reverse=True)
+
+	assert len(probabilities) == len(class_names)
+	yield from zip(class_names, probabilities)
