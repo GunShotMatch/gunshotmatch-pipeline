@@ -10,6 +10,7 @@
 
 
 .. autodata:: gunshotmatch_pipeline.utils.project_plural
+.. autodata:: gunshotmatch_pipeline.utils.unknown_plural
 
 .. autovariable:: gunshotmatch_pipeline.utils.friendly_name_mapping
 	:no-value:

@@ -132,6 +132,10 @@ def simulate_data(
 	:param project:
 	:param normalize:
 	:param n_simulated: The number of values to simulate.
+
+	:rtype:
+
+	.. latex:clearpage::
 	"""
 
 	propellant_data = gunshotmatch_pipeline.results.matches(project)
