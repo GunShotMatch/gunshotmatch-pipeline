@@ -39,10 +39,17 @@ except ImportError:
 	# 3rd party
 	import tomli as tomllib  # type: ignore[no-redef]
 
-__all__ = ("project_plural", "friendly_name_mapping", "tomllib", "NameMapping")
+__all__ = ("project_plural", "unknown_plural", "friendly_name_mapping", "tomllib", "NameMapping")
 
 #: :class:`domdf_python_tools.words.Plural` for ``project``.
 project_plural = Plural("project", "projects")
+
+unknown_plural = Plural("unknown", "unknowns")
+"""
+:class:`domdf_python_tools.words.Plural` for ``unknown``.
+
+.. versionadded:: 0.9.0
+"""
 
 
 class NameMapping(Dict[str, str]):
