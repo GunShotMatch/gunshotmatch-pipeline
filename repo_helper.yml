@@ -52,9 +52,7 @@ github_ci_requirements:
  Windows:
   post:
    - choco install graphviz
-  #  - "\r      - uses: ts-graphviz/setup-graphviz@v2"
-  #  - "\r        name: Setup Graphviz"
- macOS:
-  post:
-   - brew update
-   - brew install graphviz
+
+platforms:
+ - Linux
+ - Windows

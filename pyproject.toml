@@ -28,7 +28,7 @@ Documentation = "https://gunshotmatch-pipeline.readthedocs.io/en/latest"
 base-classifiers = [ "Typing :: Typed",]
 python-versions = [ "3.8", "3.9", "3.10", "3.11", "3.12",]
 python-implementations = [ "CPython",]
-platforms = [ "Windows", "macOS", "Linux",]
+platforms = [ "Linux", "Windows",]
 license-key = "MIT"
 package = "gunshotmatch_pipeline"
 

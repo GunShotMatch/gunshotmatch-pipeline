@@ -18,7 +18,7 @@ gunshotmatch-pipeline
 	* - Docs
 	  - |docs| |docs_check|
 	* - Tests
-	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
+	  - |actions_linux| |actions_windows| |coveralls|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -43,10 +43,6 @@ gunshotmatch-pipeline
 .. |actions_windows| image:: https://github.com/GunShotMatch/gunshotmatch-pipeline/workflows/Windows/badge.svg
 	:target: https://github.com/GunShotMatch/gunshotmatch-pipeline/actions?query=workflow%3A%22Windows%22
 	:alt: Windows Test Status
-
-.. |actions_macos| image:: https://github.com/GunShotMatch/gunshotmatch-pipeline/workflows/macOS/badge.svg
-	:target: https://github.com/GunShotMatch/gunshotmatch-pipeline/actions?query=workflow%3A%22macOS%22
-	:alt: macOS Test Status
 
 .. |actions_flake8| image:: https://github.com/GunShotMatch/gunshotmatch-pipeline/workflows/Flake8/badge.svg
 	:target: https://github.com/GunShotMatch/gunshotmatch-pipeline/actions?query=workflow%3A%22Flake8%22
