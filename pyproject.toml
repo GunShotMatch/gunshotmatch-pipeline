@@ -14,7 +14,6 @@ dynamic = [ "requires-python", "classifiers", "dependencies",]
 name = "Dominic Davis-Foster"
 email = "dominic@davis-foster.co.uk"
 
-
 [project.license]
 file = "LICENSE"
 
@@ -57,8 +56,23 @@ show_error_codes = true
 [tool.snippet-fmt]
 directives = [ "code-block",]
 
+[tool.snippet-fmt.languages.python]
+reformat = true
+
+[tool.snippet-fmt.languages.TOML]
+reformat = true
+
+[tool.snippet-fmt.languages.ini]
+
+[tool.snippet-fmt.languages.json]
+
 [tool.dep_checker]
 allowed_unused = "tomli"
+
+[tool.dep_checker.name_mapping]
+attrs = "attr"
+pymassspec = "pyms"
+scikit-learn = "sklearn"
 
 [tool.sphinx-pyproject]
 github_username = "GunShotMatch"
@@ -139,11 +153,6 @@ autodoc_exclude_members = [
     "__hash__",
 ]
 
-[tool.dep_checker.name_mapping]
-attrs = "attr"
-pymassspec = "pyms"
-scikit-learn = "sklearn"
-
 [tool.dependency-dash."requirements.txt"]
 order = 10
 
@@ -154,13 +163,3 @@ include = false
 [tool.dependency-dash."tests/requirements.txt"]
 order = 20
 include = false
-
-[tool.snippet-fmt.languages.python]
-reformat = true
-
-[tool.snippet-fmt.languages.TOML]
-reformat = true
-
-[tool.snippet-fmt.languages.ini]
-
-[tool.snippet-fmt.languages.json]
