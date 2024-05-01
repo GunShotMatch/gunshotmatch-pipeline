@@ -12,7 +12,7 @@ edge [fontname="helvetica"] ;
 3 -> 4 ;
 5 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 36, 0, 0, 0, 0]<br/>class = Gamebore Clear Pigeon>] ;
 4 -> 5 ;
-6 [label=<1-Methyl-2-nitroenzene &le; 237696232.0<br/>gini = 0.444<br/>samples = 3<br/>value = [6, 3, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
+6 [label=<1-Methyl-2-nitrobenzene &le; 237696232.0<br/>gini = 0.444<br/>samples = 3<br/>value = [6, 3, 0, 0, 0, 0, 0]<br/>class = Eley Hymax>] ;
 4 -> 6 ;
 7 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1, 0, 0, 0, 0, 0]<br/>class = Eley Super Game>] ;
 6 -> 7 ;

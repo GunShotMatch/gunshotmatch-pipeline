@@ -2,7 +2,7 @@ digraph Tree {
 node [shape=box, fontname="helvetica"] ;
 edge [fontname="helvetica"] ;
 0 [label=<Ethanol, 2-(9-octadecenyloxy)-, (Z)- &le; 2927543.25<br/>gini = 0.837<br/>samples = 19<br/>value = [4, 5, 4, 3, 3, 7, 2]<br/>class = Ward Thompson Classic>] ;
-1 [label=<1-Methyl-2-nitroenzene &le; 96249752.0<br/>gini = 0.821<br/>samples = 15<br/>value = [4, 5, 4, 3, 3, 0, 2]<br/>class = Eley Super Game>] ;
+1 [label=<1-Methyl-2-nitrobenzene &le; 96249752.0<br/>gini = 0.821<br/>samples = 15<br/>value = [4, 5, 4, 3, 3, 0, 2]<br/>class = Eley Super Game>] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
 2 [label=<1,6-Anhydro-β-D-glucopyranose (levoglucosan) &le; 48946508.0<br/>gini = 0.736<br/>samples = 9<br/>value = [0, 0, 4, 3, 3, 0, 2]<br/>class = Gamebore Clear Pigeon>] ;
 1 -> 2 ;

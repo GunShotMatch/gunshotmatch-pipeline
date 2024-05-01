@@ -10,7 +10,7 @@ def test_friendly_name_mapping():
 	assert friendly_name_mapping["Benzene, 2-methyl-1,3-dinitro-"] == "2,6-DNT"
 	assert friendly_name_mapping["Benzene, 1-methyl-2,3-dinitro-"] == "2,3-DNT"
 	assert friendly_name_mapping["Benzene, 1-methyl-2,4-dinitro-"] == "2,4-DNT"
-	assert friendly_name_mapping["Benzene, 1-methyl-2-nitro-"] == "1-Methyl-2-nitroenzene"
+	assert friendly_name_mapping["Benzene, 1-methyl-2-nitro-"] == "1-Methyl-2-nitrobenzene"
 	assert friendly_name_mapping["Phenol, 2-nitro-"] == "2-Nitrophenol"
 	assert friendly_name_mapping["Benzene, 1-methyl-4-nitro-"] == "4-Nitrotoluene"
 	assert friendly_name_mapping["Benzene, 1-methyl-3-nitro-"] == "3-Nitrotoluene"

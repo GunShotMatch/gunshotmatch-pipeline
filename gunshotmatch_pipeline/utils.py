@@ -75,7 +75,7 @@ friendly_name_mapping = NameMapping({
 		"Benzene, 2-methyl-1,3-dinitro-": "2,6-DNT",
 		"Benzene, 1-methyl-2,3-dinitro-": "2,3-DNT",
 		"Benzene, 1-methyl-2,4-dinitro-": "2,4-DNT",
-		"Benzene, 1-methyl-2-nitro-": "1-Methyl-2-nitroenzene",
+		"Benzene, 1-methyl-2-nitro-": "1-Methyl-2-nitrobenzene",
 		"Phenol, 2-nitro-": "2-Nitrophenol",
 		"Benzene, 1-methyl-4-nitro-": "4-Nitrotoluene",
 		"Benzene, 1-methyl-3-nitro-": "3-Nitrotoluene",

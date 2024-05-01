@@ -6,7 +6,7 @@ edge [fontname="helvetica"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
 2 [label=<Dibutyl phthalate &le; 1566252160.0<br/>gini = 0.757<br/>samples = 9<br/>value = [2, 4, 0, 0, 1, 4, 2]<br/>class = Eley Super Game>] ;
 1 -> 2 ;
-3 [label=<1-Methyl-2-nitroenzene &le; 96249752.0<br/>gini = 0.691<br/>samples = 6<br/>value = [2, 4, 0, 0, 1, 0, 2]<br/>class = Eley Super Game>] ;
+3 [label=<1-Methyl-2-nitrobenzene &le; 96249752.0<br/>gini = 0.691<br/>samples = 6<br/>value = [2, 4, 0, 0, 1, 0, 2]<br/>class = Eley Super Game>] ;
 2 -> 3 ;
 4 [label=<Carbamoyl chloride, phenyl- &le; 3799240.75<br/>gini = 0.444<br/>samples = 3<br/>value = [0, 0, 0, 0, 1, 0, 2]<br/>class = Western Double A>] ;
 3 -> 4 ;
