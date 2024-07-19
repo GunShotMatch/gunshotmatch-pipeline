@@ -32,7 +32,7 @@ from operator import itemgetter
 from typing import Dict, List, Tuple, Type
 
 # 3rd party
-import attr
+import attrs
 import pyms_nist_search
 import tomli_w
 from domdf_python_tools.paths import PathPlus
@@ -57,7 +57,7 @@ __all__ = ("UnknownSettings", "filter_and_identify_peaks", "process_unknown")
 
 
 @_fix_init_annotations
-@attr.define
+@attrs.define
 class UnknownSettings(MethodBase, LoaderMixin):
 	"""
 	Settings for an unknown propellant or OGSR sample.
@@ -66,19 +66,19 @@ class UnknownSettings(MethodBase, LoaderMixin):
 	"""
 
 	#: The unknown sample's name or identifier.
-	name: str = String.field(default=attr.NOTHING)
+	name: str = String.field(default=attrs.NOTHING)
 
 	#: The input datafile
-	datafile: str = String.field(default=attr.NOTHING)
+	datafile: str = String.field(default=attrs.NOTHING)
 
 	#: Relative or absolute filename to the method TOML file. The table name is "method".
-	method: str = String.field(default=attr.NOTHING)
+	method: str = String.field(default=attrs.NOTHING)
 
 	#: Relative or absolute filename to the configuration TOML file. The table name is "config".
-	config: str = String.field(default=attr.NOTHING)
+	config: str = String.field(default=attrs.NOTHING)
 
 	#: Relative or absolute path to the directory the output files should be placed in.
-	output_directory: str = String.field(default=attr.NOTHING)
+	output_directory: str = String.field(default=attrs.NOTHING)
 
 	#: Relative or absolute path to the directory containing the data files.
 	data_directory: str = String.field(default='')

@@ -32,7 +32,7 @@ from collections.abc import Iterable
 from typing import Any, Dict, Iterator, List, Mapping, MutableMapping, Optional, Type
 
 # 3rd party
-import attr
+import attrs
 import tomli_w
 from domdf_python_tools.paths import PathPlus
 from domdf_python_tools.typing import PathLike
@@ -85,7 +85,7 @@ class LoaderMixin:
 
 
 @_fix_init_annotations
-@attr.define
+@attrs.define
 class GlobalSettings(MethodBase, LoaderMixin):
 	"""
 	Settings applied for all projects.
@@ -101,17 +101,17 @@ class GlobalSettings(MethodBase, LoaderMixin):
 	output_directory: str = String.field(default="output")
 
 	#: Relative or absolute filename to the method TOML file. The table name is "method".
-	method: Optional[str] = attr.field(default=None)
+	method: Optional[str] = attrs.field(default=None)
 
 	#: Relative or absolute filename to the configuration TOML file. The table name is "gunshotmatch".
-	config: Optional[str] = attr.field(default=None)
+	config: Optional[str] = attrs.field(default=None)
 
 	#: Relative or absolute path to the directory containing the data files.
-	data_directory: Optional[str] = attr.field(default=None)
+	data_directory: Optional[str] = attrs.field(default=None)
 
 
 @_fix_init_annotations
-@attr.define
+@attrs.define
 class ProjectSettings(MethodBase, LoaderMixin):
 	"""
 	Settings for a specific project.
@@ -121,7 +121,7 @@ class ProjectSettings(MethodBase, LoaderMixin):
 	:param name: The project name.
 	"""
 
-	name: str = String.field(default=attr.NOTHING)
+	name: str = String.field(default=attrs.NOTHING)
 	"""
 	The project name.
 
@@ -129,17 +129,17 @@ class ProjectSettings(MethodBase, LoaderMixin):
 	"""
 
 	#: List of input datafiles (paths relative to the data_directory option)
-	datafiles: List[str] = attr.field(converter=_convert_datafiles)  # type: ignore[misc]
-	# mypy is confused by the `default=attr.NOTHING`
+	datafiles: List[str] = attrs.field(converter=_convert_datafiles)  # type: ignore[misc]
+	# mypy is confused by the `default=attrs.NOTHING`
 
 	#: Relative or absolute filename to the method TOML file. The table name is "method".
-	method: Optional[str] = attr.field(default=None)
+	method: Optional[str] = attrs.field(default=None)
 
 	#: Relative or absolute filename to the configuration TOML file. The table name is "config".
-	config: Optional[str] = attr.field(default=None)
+	config: Optional[str] = attrs.field(default=None)
 
 	#: Relative or absolute path to the directory containing the data files.
-	data_directory: Optional[str] = attr.field(default=None)
+	data_directory: Optional[str] = attrs.field(default=None)
 
 	def get_datafile_paths(self) -> Iterator[PathPlus]:
 		"""
@@ -154,7 +154,7 @@ class ProjectSettings(MethodBase, LoaderMixin):
 
 
 @_fix_init_annotations
-@attr.define
+@attrs.define
 class Projects(MethodBase):
 	"""
 	Reference data projects to process through the pipeline.
@@ -168,7 +168,7 @@ class Projects(MethodBase):
 	global_settings: GlobalSettings = _submethod_field(GlobalSettings)
 
 	#: Settings for specific projects.
-	per_project_settings: Dict[str, ProjectSettings] = attr.field(factory=dict)
+	per_project_settings: Dict[str, ProjectSettings] = attrs.field(factory=dict)
 
 	@classmethod
 	def from_toml(cls: Type["Projects"], toml_string: str) -> "Projects":

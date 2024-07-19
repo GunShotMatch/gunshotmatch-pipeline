@@ -70,7 +70,6 @@ reformat = true
 allowed_unused = "tomli"
 
 [tool.dep_checker.name_mapping]
-attrs = "attr"
 pymassspec = "pyms"
 scikit-learn = "sklearn"
 

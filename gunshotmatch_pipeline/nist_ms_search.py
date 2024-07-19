@@ -32,7 +32,7 @@ from tempfile import TemporaryDirectory
 from typing import Any, Dict, Iterator, Optional
 
 # 3rd party
-import attr
+import attrs
 import pyms_nist_search
 from domdf_python_tools.typing import PathLike
 from libgunshotmatch.method import MethodBase
@@ -43,7 +43,7 @@ __all__ = ("PyMSNISTSearchCfg", "nist_ms_search_engine", "LazyEngine", "engine_o
 
 
 @_fix_init_annotations
-@attr.define
+@attrs.define
 class PyMSNISTSearchCfg(MethodBase):
 	"""
 	Configuration for :mod:`pyms_nist_search`.
@@ -52,7 +52,7 @@ class PyMSNISTSearchCfg(MethodBase):
 	"""
 
 	#: Absolute path to the NIST library (mainlib or user).
-	library_path: str = String.field(default=attr.NOTHING)
+	library_path: str = String.field(default=attrs.NOTHING)
 
 	#: :py:obj:`True` for user libraries; :py:obj:`False` for the NIST mainlib.
 	user_library: bool = Boolean.field(default=False)

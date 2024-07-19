@@ -31,7 +31,7 @@ import json
 from typing import Type
 
 # 3rd party
-import attr
+import attrs
 import tomli_w
 from libgunshotmatch.method import MethodBase
 from libgunshotmatch.utils import _fix_init_annotations
@@ -44,14 +44,14 @@ __all__ = ("Configuration", )
 
 
 @_fix_init_annotations
-@attr.define
+@attrs.define
 class Configuration(MethodBase):
 	"""
 	Overall GunShotMatch configuration.
 	"""
 
 	#: Configuration for :mod:`pyms_nist_search`.
-	pyms_nist_search: PyMSNISTSearchCfg = attr.field(converter=PyMSNISTSearchCfg._coerce)  # type: ignore[misc]
+	pyms_nist_search: PyMSNISTSearchCfg = attrs.field(converter=PyMSNISTSearchCfg._coerce)  # type: ignore[misc]
 
 	@classmethod
 	def from_toml(cls: Type["Configuration"], toml_string: str) -> "Configuration":

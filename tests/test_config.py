@@ -1,5 +1,5 @@
 # 3rd party
-import attr
+import attrs
 from coincidence.regressions import AdvancedDataRegressionFixture, AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
 
@@ -11,7 +11,7 @@ from gunshotmatch_pipeline.nist_ms_search import PyMSNISTSearchCfg
 def test_load_config(advanced_data_regression: AdvancedDataRegressionFixture):
 	filename = PathPlus(__file__).parent / "config.toml"
 	config = Configuration.from_toml(filename.read_text())
-	advanced_data_regression.check(attr.asdict(config))
+	advanced_data_regression.check(attrs.asdict(config))
 
 
 # def test_json_config(advanced_data_regression: AdvancedDataRegressionFixture):

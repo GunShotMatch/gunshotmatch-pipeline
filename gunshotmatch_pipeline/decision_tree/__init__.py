@@ -35,7 +35,7 @@ from string import ascii_lowercase
 from typing import Collection, Iterator, List, Tuple, Type
 
 # 3rd party
-import attr
+import attrs
 import graphviz  # type: ignore[import]
 import numpy
 import pandas  # type: ignore[import]
@@ -261,7 +261,7 @@ def visualise_decision_tree(
 	return visualiser.visualise_tree(filename, filetype)
 
 
-@attr.define
+@attrs.define
 class DecisionTreeVisualiser:
 	"""
 	Class for exporting visualisations of a decision tree or random forest.
@@ -276,13 +276,13 @@ class DecisionTreeVisualiser:
 	feature_names: List[str]
 
 	#: List of class names in the order they appear as classes in the classifier.
-	factorize_map: List[str] = attr.field(on_setattr=attr.setters.validate)
+	factorize_map: List[str] = attrs.field(on_setattr=attrs.setters.validate)
 
 	# Cached names for graphvis
-	_dotsafe_class_names: List[str] = attr.field(init=False, default=None)
+	_dotsafe_class_names: List[str] = attrs.field(init=False, default=None)
 
 	@factorize_map.validator
-	def _dotsafe_factorize_map(self, attribute: attr.Attribute, value: List[str]) -> None:
+	def _dotsafe_factorize_map(self, attribute: attrs.Attribute, value: List[str]) -> None:
 		self._dotsafe_class_names = list(map(dotsafe_name, value))
 
 	@classmethod
