@@ -234,8 +234,9 @@ def unknown_machine_learning_data(
 	decision_tree_compound_data: Dict[_CompoundName, Dict[_PropellantNameAndID, _PeakArea]] = defaultdict(dict)
 
 	for compound, propellant_peak_areas in unknown(unknown_project, normalize=normalize).items():
+		assert len(propellant_peak_areas) == 1
 		for propellant, peak_areas in propellant_peak_areas.items():
-			for identifier, peak_area in zip(ascii_lowercase, peak_areas):
-				decision_tree_compound_data[compound][f"{propellant}-{identifier}"] = peak_area
+			for peak_area in peak_areas:
+				decision_tree_compound_data[compound][f"{propellant}"] = peak_area
 
 	return decision_tree_compound_data
