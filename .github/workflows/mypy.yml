@@ -49,8 +49,9 @@ jobs:
           python -m site
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install --upgrade tox~=3.0 virtualenv!=20.16.0
+          sudo add-apt-repository universe
           sudo apt update
-          sudo apt install graphviz
+          sudo apt install libhdf5-dev netcdf-bin libnetcdf-dev graphviz
 
       - name: Install dependencies (Windows) 🔧
         if: ${{ matrix.os != 'ubuntu-20.04' && steps.changes.outputs.code == 'true' }}
@@ -59,6 +60,7 @@ jobs:
           python -m site
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install --upgrade tox~=3.0 virtualenv!=20.16.0
+          pip config set global.prefer-binary true
           choco install graphviz
 
       - name: "Run mypy"
