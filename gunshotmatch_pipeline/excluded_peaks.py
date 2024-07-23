@@ -32,7 +32,7 @@ Report excluded peaks from various pipeline steps.
 import io
 from collections import deque
 from contextlib import redirect_stdout
-from typing import IO, Dict, List, MutableSequence, NamedTuple, Optional, Sequence
+from typing import Dict, List, MutableSequence, NamedTuple, Optional, Sequence
 
 # 3rd party
 import attrs
@@ -98,7 +98,7 @@ class ExcludedPeaks:
 	filtered_out_consolidated_peaks: List[ConsolidatedPeak]
 
 	#: Stdout from alignment and peak identification process, for debugging.
-	debug_stdout: IO[str]
+	debug_stdout: io.StringIO
 
 
 def get_padded_peak_list(

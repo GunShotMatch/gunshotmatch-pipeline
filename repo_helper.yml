@@ -56,3 +56,5 @@ github_ci_requirements:
 platforms:
  - Linux
  - Windows
+
+enable_devmode: false
