@@ -36,9 +36,9 @@ from typing import Any, Dict, Tuple
 
 # 3rd party
 import numpy
-from sklearn.ensemble import RandomForestClassifier  # type: ignore[import]
-from sklearn.tree import DecisionTreeClassifier  # type: ignore[import]
-from sklearn.tree._tree import Tree  # type: ignore[import]
+from sklearn.ensemble import RandomForestClassifier  # type: ignore[import-untyped]
+from sklearn.tree import DecisionTreeClassifier  # type: ignore[import-untyped]
+from sklearn.tree._tree import Tree  # type: ignore[import-untyped]
 
 __all__ = [
 		"serialise_decision_tree",

@@ -34,10 +34,10 @@ from domdf_python_tools.words import Plural
 
 try:
 	# stdlib
-	import tomllib  # type: ignore[import]
+	import tomllib  # type: ignore[import-not-found]
 except ImportError:
 	# 3rd party
-	import tomli as tomllib  # type: ignore[no-redef]
+	import tomli as tomllib
 
 __all__ = ("project_plural", "unknown_plural", "friendly_name_mapping", "tomllib", "NameMapping")
 

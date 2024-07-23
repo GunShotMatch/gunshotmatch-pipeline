@@ -34,7 +34,7 @@ from string import ascii_lowercase
 from typing import Dict, List
 
 # 3rd party
-import pandas  # type: ignore[import]
+import pandas  # type: ignore[import-untyped]
 from libgunshotmatch.project import Project
 from typing_extensions import TypedDict
 

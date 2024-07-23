@@ -12,6 +12,7 @@ short_desc: 'GunShotMatch Analysis Pipeline'
 enable_conda: false
 use_whey: true
 min_coverage: 70
+mypy_version: 1.11.0
 
 python_versions:
  3.8:

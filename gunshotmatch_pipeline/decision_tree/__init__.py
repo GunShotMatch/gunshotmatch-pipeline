@@ -36,15 +36,15 @@ from typing import Collection, Iterator, List, Tuple, Type
 
 # 3rd party
 import attrs
-import graphviz  # type: ignore[import]
+import graphviz  # type: ignore[import-untyped]
 import numpy
-import pandas  # type: ignore[import]
-import sklearn.tree  # type: ignore[import]
+import pandas  # type: ignore[import-untyped]
+import sklearn.tree  # type: ignore[import-untyped]
 from domdf_python_tools.paths import PathPlus
 from libgunshotmatch.project import Project
 from libgunshotmatch.utils import get_truncated_normal
-from sklearn.base import ClassifierMixin  # type: ignore[import]
-from sklearn.ensemble import RandomForestClassifier  # type: ignore[import]
+from sklearn.base import ClassifierMixin  # type: ignore[import-untyped]
+from sklearn.ensemble import RandomForestClassifier  # type: ignore[import-untyped]
 
 # this package
 import gunshotmatch_pipeline.results

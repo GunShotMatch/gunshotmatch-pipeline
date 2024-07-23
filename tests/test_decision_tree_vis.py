@@ -6,7 +6,7 @@ from typing import List, Tuple
 import pytest
 from coincidence.regressions import AdvancedDataRegressionFixture, AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
-from sklearn.ensemble import RandomForestClassifier  # type: ignore[import]
+from sklearn.ensemble import RandomForestClassifier  # type: ignore[import-untyped]
 
 # this package
 from gunshotmatch_pipeline.decision_tree import DecisionTreeVisualiser

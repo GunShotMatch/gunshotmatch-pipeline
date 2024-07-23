@@ -6,10 +6,10 @@ from typing import Any, List, Tuple
 # 3rd party
 import numpy
 import pytest
-from sklearn.datasets import make_classification  # type: ignore[import]
-from sklearn.ensemble import RandomForestClassifier  # type: ignore[import]
-from sklearn.feature_extraction import FeatureHasher  # type: ignore[import]
-from sklearn.tree import DecisionTreeClassifier  # type: ignore[import]
+from sklearn.datasets import make_classification  # type: ignore[import-untyped]
+from sklearn.ensemble import RandomForestClassifier  # type: ignore[import-untyped]
+from sklearn.feature_extraction import FeatureHasher  # type: ignore[import-untyped]
+from sklearn.tree import DecisionTreeClassifier  # type: ignore[import-untyped]
 
 # this package
 from gunshotmatch_pipeline.decision_tree.export import (

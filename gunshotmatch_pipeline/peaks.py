@@ -27,7 +27,7 @@ Peak detection and alignment functions.
 #
 
 # 3rd party
-import pandas  # type: ignore[import]
+import pandas  # type: ignore[import-untyped]
 from libgunshotmatch.datafile import Datafile
 from libgunshotmatch.method import Method
 from libgunshotmatch.peak import PeakList, align_peaks, filter_aligned_peaks, filter_peaks

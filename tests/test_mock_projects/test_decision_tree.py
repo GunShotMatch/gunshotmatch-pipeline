@@ -2,7 +2,7 @@
 from coincidence.regressions import AdvancedDataRegressionFixture
 from domdf_python_tools.paths import PathPlus
 from pytest_regressions.dataframe_regression import DataFrameRegressionFixture
-from sklearn.tree import DecisionTreeClassifier  # type: ignore[import]
+from sklearn.tree import DecisionTreeClassifier  # type: ignore[import-untyped]
 
 # this package
 from gunshotmatch_pipeline.decision_tree import data_from_projects, dotsafe_name, fit_decision_tree
