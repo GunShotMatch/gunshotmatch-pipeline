@@ -17,7 +17,9 @@ RegressionYamlDumper.represent_undefined = represent_undefined  # type: ignore[m
 
 @_representer_for(ConsolidatedPeak)
 def _represent_consolidated_peak(dumper: RegressionYamlDumper, data: ConsolidatedPeak):  # noqa: MAN002
-	return dumper.represent_data(data.to_dict())
+	as_dict = data.to_dict()
+	as_dict["ms_comparison"] = {k: f"{v:0.6f}" for k, v in as_dict["ms_comparison"].items()}
+	return dumper.represent_data(as_dict)
 
 
 @_representer_for(PeakList)
