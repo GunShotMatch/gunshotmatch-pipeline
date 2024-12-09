@@ -49,7 +49,7 @@ __all__ = ("prepare_datafile", "project_from_repeats")
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2020-2023 Dominic Davis-Foster"
 __license__: str = "MIT License"
-__version__: str = "0.9.1"
+__version__: str = "0.10.0"
 __email__: str = "dominic@davis-foster.co.uk"
 
 
