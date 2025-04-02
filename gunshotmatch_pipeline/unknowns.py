@@ -29,7 +29,7 @@ Metadata and pipeline for unknown samples.
 # stdlib
 import json
 from operator import itemgetter
-from typing import Dict, List, Tuple, Type
+from typing import Dict, Iterator, List, Tuple, Type
 
 # 3rd party
 import attrs
@@ -243,3 +243,71 @@ def process_unknown(
 		print(f"Project saved to {export_filename!r}")
 
 	return project
+
+
+@_fix_init_annotations
+@attrs.define
+class Unknowns(MethodBase):
+	"""
+	Unknown samples.
+
+	Analogue of :class:`gunshotmatch_pipeline.projects.Projects`.
+
+	.. versionadded:: 0.11.0
+	"""
+
+	#: Settings for specific unknowns.
+	per_unknown_settings: Dict[str, UnknownSettings] = attrs.field(factory=dict)
+
+	@classmethod
+	def from_toml(cls: Type["Unknowns"], toml_string: str) -> "Unknowns":
+		"""
+		Parse a :class:`~.Unknowns` from a TOML string.
+
+		:param toml_string:
+		"""
+
+		unknown_settings_toml = tomllib.loads(toml_string)
+		return cls({k: UnknownSettings(k, **v) for k, v in unknown_settings_toml.items() if isinstance(v, dict)})
+
+	def get_unknown_settings(self, unknown_name: str) -> UnknownSettings:
+		"""
+		Returns the settings for the given unknown.
+
+		:param unknown_name:
+		"""
+
+		return self.per_unknown_settings[unknown_name]
+
+	__getitem__ = get_unknown_settings
+
+	def iter_unknown_settings(self) -> Iterator[UnknownSettings]:
+		"""
+		Iterate over the per-unknown settings.
+		"""
+
+		yield from self.per_unknown_settings.values()
+
+	__iter__ = iter_unknown_settings
+
+	def load_unknown(self, unknown_name: str) -> Project:
+		"""
+		Load a previously created unknown.
+
+		:param unknown_name:
+		"""
+
+		unknown_settings = self.get_unknown_settings(unknown_name)
+		output_dir = PathPlus(unknown_settings.output_directory)
+		return Project.from_file(output_dir / f"{unknown_name}.gsmp")
+
+	def iter_loaded_unknowns(self) -> Iterator[Project]:
+		"""
+		Iterate :class:`~libgunshotmatch.project.Project` objects loaded from disk.
+		"""
+
+		for unknown_name in self.per_unknown_settings.keys():
+			yield self.load_unknown(unknown_name)
+
+	def __len__(self) -> int:
+		return len(self.per_unknown_settings)

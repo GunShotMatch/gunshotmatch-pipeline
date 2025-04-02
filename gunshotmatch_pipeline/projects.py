@@ -243,6 +243,8 @@ class Projects(MethodBase):
 
 		return settings
 
+	__getitem__ = get_project_settings
+
 	def iter_project_settings(self) -> Iterator[ProjectSettings]:
 		"""
 		Iterate over the per-project settings, taking into account the global settings.
@@ -250,6 +252,8 @@ class Projects(MethodBase):
 
 		for project_name in self.per_project_settings.keys():
 			yield self.get_project_settings(project_name)
+
+	__iter__ = iter_project_settings
 
 	def load_project(self, project_name: str) -> Project:
 		"""
