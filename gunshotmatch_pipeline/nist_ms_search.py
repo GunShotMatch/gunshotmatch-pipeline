@@ -27,9 +27,10 @@ Configuration for :mod:`pyms_nist_search` and NIST MS Search.
 #
 
 # stdlib
-from contextlib import contextmanager
+import io
+from contextlib import contextmanager, redirect_stdout
 from tempfile import TemporaryDirectory
-from typing import Any, Dict, Iterator, Optional
+from typing import Any, Dict, Iterator, List, Optional, Tuple
 
 # 3rd party
 import attrs
@@ -39,7 +40,13 @@ from libgunshotmatch.method import MethodBase
 from libgunshotmatch.method._fields import Boolean, String
 from libgunshotmatch.utils import _fix_init_annotations
 
-__all__ = ("PyMSNISTSearchCfg", "nist_ms_search_engine", "LazyEngine", "engine_on_demand")
+__all__ = (
+		"PyMSNISTSearchCfg",
+		"nist_ms_search_engine",
+		"LazyEngine",
+		"engine_on_demand",
+		"get_reference_data_for_cas",
+		)
 
 
 @_fix_init_annotations
@@ -138,3 +145,31 @@ def engine_on_demand(config: PyMSNISTSearchCfg, **kwargs) -> Iterator[LazyEngine
 	le = LazyEngine(config, **kwargs)
 	yield le
 	le.deinit()
+
+
+def get_reference_data_for_cas(
+		cas: str,
+		pyms_nist_search_config: PyMSNISTSearchCfg,
+		) -> Tuple[str, Tuple[List[int], List[float]]]:
+	"""
+	Returns the name and mass spectra of the compound with the given CAS number.
+
+	:param cas:
+	:param pyms_nist_search_config:
+
+	:rtype:
+
+	.. versionadded:: 0.11.0
+	"""
+
+	debug_stdout = io.StringIO()
+
+	with redirect_stdout(debug_stdout):
+		with engine_on_demand(pyms_nist_search_config) as search:
+			cas_search_results = search.engine.cas_search(cas)
+			other_compound: pyms_nist_search.ReferenceData = search.engine.get_reference_data(
+					cas_search_results[0].spec_loc
+					)
+			assert other_compound.mass_spec is not None
+
+	return other_compound.name, (other_compound.mass_spec.mass_list, other_compound.mass_spec.intensity_list)
