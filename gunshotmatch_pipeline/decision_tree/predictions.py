@@ -40,13 +40,13 @@ class PredictionResult(NamedTuple):
 	Represents the predicted classes from a random forest classifier.
 	"""
 
-	#: the sample name e.g. "Unknown Western Double A"
+	#: The sample name e.g. "Unknown Western Double A"
 	name: str
 
-	#: i.e. the ammo type e.g. "Western Double A"
+	#: The class name, i.e. the ammo type e.g. "Western Double A"
 	class_name: str
 
-	#: Tuples of ``(<class name>, <probability>)``.
+	#: List of predictions (pairs of ``(<class name>, <probability>)``)
 	predictions: Tuple[Tuple[str, float], ...]
 
 	@property
