@@ -34,12 +34,13 @@ from typing import Any, Dict, Iterator, List, Mapping, MutableMapping, Optional,
 # 3rd party
 import attrs
 import tomli_w
+from dom_toml.config import Config, subtable_field
+from dom_toml.config.fields import String
 from domdf_python_tools.paths import PathPlus
 from domdf_python_tools.typing import PathLike
 from libgunshotmatch.consolidate import ConsolidatedPeakFilter
 from libgunshotmatch.datafile import Repeat
-from libgunshotmatch.method import Method, MethodBase, _submethod_field
-from libgunshotmatch.method._fields import String
+from libgunshotmatch.method import Method
 from libgunshotmatch.project import Project
 from libgunshotmatch.utils import _fix_init_annotations
 
@@ -86,7 +87,7 @@ class LoaderMixin:
 
 @_fix_init_annotations
 @attrs.define
-class GlobalSettings(MethodBase, LoaderMixin):
+class GlobalSettings(Config, LoaderMixin):
 	"""
 	Settings applied for all projects.
 
@@ -112,7 +113,7 @@ class GlobalSettings(MethodBase, LoaderMixin):
 
 @_fix_init_annotations
 @attrs.define
-class ProjectSettings(MethodBase, LoaderMixin):
+class ProjectSettings(Config, LoaderMixin):
 	"""
 	Settings for a specific project.
 
@@ -155,7 +156,7 @@ class ProjectSettings(MethodBase, LoaderMixin):
 
 @_fix_init_annotations
 @attrs.define
-class Projects(MethodBase):
+class Projects(Config):
 	"""
 	Reference data projects to process through the pipeline.
 
@@ -165,7 +166,7 @@ class Projects(MethodBase):
 	"""
 
 	#: Settings applied for all projects.
-	global_settings: GlobalSettings = _submethod_field(GlobalSettings)
+	global_settings: GlobalSettings = subtable_field(GlobalSettings)
 
 	#: Settings for specific projects.
 	per_project_settings: Dict[str, ProjectSettings] = attrs.field(factory=dict)

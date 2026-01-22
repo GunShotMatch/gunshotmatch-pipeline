@@ -35,9 +35,9 @@ from typing import Any, Dict, Iterator, List, Optional, Tuple
 # 3rd party
 import attrs
 import pyms_nist_search
+from dom_toml.config import Config
+from dom_toml.config.fields import Boolean, String
 from domdf_python_tools.typing import PathLike
-from libgunshotmatch.method import MethodBase
-from libgunshotmatch.method._fields import Boolean, String
 from libgunshotmatch.utils import _fix_init_annotations
 
 __all__ = (
@@ -51,7 +51,7 @@ __all__ = (
 
 @_fix_init_annotations
 @attrs.define
-class PyMSNISTSearchCfg(MethodBase):
+class PyMSNISTSearchCfg(Config):
 	"""
 	Configuration for :mod:`pyms_nist_search`.
 

@@ -35,12 +35,13 @@ from typing import Dict, Iterator, List, Tuple, Type
 import attrs
 import pyms_nist_search
 import tomli_w
+from dom_toml.config import Config
+from dom_toml.config.fields import String
 from domdf_python_tools.paths import PathPlus
 from domdf_python_tools.typing import PathLike
 from libgunshotmatch.consolidate import ConsolidatedPeakFilter
 from libgunshotmatch.datafile import Repeat
-from libgunshotmatch.method import Method, MethodBase
-from libgunshotmatch.method._fields import String
+from libgunshotmatch.method import Method
 from libgunshotmatch.project import Project
 from libgunshotmatch.search import identify_peaks
 from libgunshotmatch.utils import _fix_init_annotations
@@ -58,7 +59,7 @@ __all__ = ("UnknownSettings", "filter_and_identify_peaks", "process_unknown")
 
 @_fix_init_annotations
 @attrs.define
-class UnknownSettings(MethodBase, LoaderMixin):
+class UnknownSettings(Config, LoaderMixin):
 	"""
 	Settings for an unknown propellant or OGSR sample.
 
@@ -247,7 +248,7 @@ def process_unknown(
 
 @_fix_init_annotations
 @attrs.define
-class Unknowns(MethodBase):
+class Unknowns(Config):
 	"""
 	Unknown samples.
 

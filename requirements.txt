@@ -1,7 +1,8 @@
 attrs>=23.1.0
+dom-toml[config]>=2.2.0
 domdf-python-tools>=3.6.1
 graphviz>=0.20.1
-libgunshotmatch>=0.4.0
+libgunshotmatch>=1.0.0
 numpy>=1.22
 pandas>=2.0.3
 pymassspec>=2.3.0

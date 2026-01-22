@@ -33,7 +33,7 @@ from typing import Type
 # 3rd party
 import attrs
 import tomli_w
-from libgunshotmatch.method import MethodBase
+from dom_toml.config import Config
 from libgunshotmatch.utils import _fix_init_annotations
 
 # this package
@@ -45,7 +45,7 @@ __all__ = ("Configuration", )
 
 @_fix_init_annotations
 @attrs.define
-class Configuration(MethodBase):
+class Configuration(Config):
 	"""
 	Overall GunShotMatch configuration.
 	"""
