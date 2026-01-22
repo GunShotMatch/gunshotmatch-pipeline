@@ -6,6 +6,7 @@ from typing import List, Tuple
 import pytest
 from coincidence.regressions import AdvancedDataRegressionFixture, AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
+from graphviz.backend.execute import ExecutableNotFound  # type: ignore[import-untyped]
 from sklearn.ensemble import RandomForestClassifier  # type: ignore[import-untyped]
 
 # this package
@@ -52,7 +53,11 @@ def test_graphviz_export(
 	classifier, factorize_map, feature_names = load_classifier(PathPlus("tests/decision-tree.json"))
 
 	dtv = DecisionTreeVisualiser(classifier, feature_names, factorize_map)
-	dtv.visualise_tree(filename=(tmp_pathplus / "tree").as_posix())
+
+	try:
+		dtv.visualise_tree(filename=(tmp_pathplus / "tree").as_posix())
+	except ExecutableNotFound:
+		pytest.skip(reason="graphviz not available")
 
 	output_files = [p.name for p in tmp_pathplus.iterchildren(match="*.dot")]
 	output_files.sort()
