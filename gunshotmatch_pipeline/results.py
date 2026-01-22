@@ -73,7 +73,7 @@ MatchesCompounds = TypedDict(
 				"Hit Numbers": List[int],
 				"Match Factors": List[int],
 				"Reverse Match Factors": List[int],
-				}
+				},
 		)
 
 
@@ -103,9 +103,9 @@ def matches(project: Project) -> Matches:
 					"original_filenames": [
 							repeat.datafile.original_filename for repeat in project.datafile_data.values()
 							],
-					"created": datetime.datetime.now().isoformat()
+					"created": datetime.datetime.now().isoformat(),
 					},
-			"compounds": {}
+			"compounds": {},
 			}
 
 	assert project.consolidated_peaks is not None

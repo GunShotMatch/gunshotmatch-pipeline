@@ -168,7 +168,7 @@ def get_reference_data_for_cas(
 		with engine_on_demand(pyms_nist_search_config) as search:
 			cas_search_results = search.engine.cas_search(cas)
 			other_compound: pyms_nist_search.ReferenceData = search.engine.get_reference_data(
-					cas_search_results[0].spec_loc
+					cas_search_results[0].spec_loc,
 					)
 			assert other_compound.mass_spec is not None
 

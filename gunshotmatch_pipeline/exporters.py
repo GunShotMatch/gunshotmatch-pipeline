@@ -116,7 +116,7 @@ def write_combined_csv(repeat: Repeat, output_dir: PathPlus) -> None:
 	"""
 	Write a CSV file listing the top hits for each peak in the :class:`~.libgunshotmatch.datafile.Repeat`, with associated data.
 
-	:param project:
+	:param repeat:
 	:param output_dir: Directory to save the file in
 
 	:rtype:

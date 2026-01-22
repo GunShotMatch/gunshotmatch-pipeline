@@ -83,8 +83,9 @@ def data_from_projects(
 	# data = pandas.DataFrame.from_dict(_machine_learning_data(projects, normalize))
 	data = pandas.DataFrame.from_dict(
 			gunshotmatch_pipeline.results.machine_learning_data(
-					*projects.iter_loaded_projects(), normalize=normalize
-					)
+					*projects.iter_loaded_projects(),
+					normalize=normalize,
+					),
 			)
 
 	data = data.rename(friendly_name_mapping, axis=1).fillna(0.0)
@@ -294,6 +295,10 @@ class DecisionTreeVisualiser:
 			) -> "DecisionTreeVisualiser":
 		"""
 		Alternative constructor from the pandas dataframe the classifier was trained on.
+
+		:param data:
+		:param classifier: Decision tree or random forest classifier.
+		:param factorize_map: List of class names in the order they appear as classes in the classifier.
 		"""
 
 		feature_names = get_feature_names(data)

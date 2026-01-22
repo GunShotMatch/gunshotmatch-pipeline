@@ -30,16 +30,18 @@ def load_classifier(filename: PathPlus) -> Tuple[RandomForestClassifier, List[st
 				pytest.param(
 						"38",
 						marks=pytest.mark.skipif(
-								sys.version_info[:2] != (3, 8), reason="sklearn output differs on Python 3.8"
-								)
+								sys.version_info[:2] != (3, 8),
+								reason="sklearn output differs on Python 3.8",
+								),
 						),
 				pytest.param(
 						"39",
 						marks=pytest.mark.skipif(
-								sys.version_info[:2] == (3, 8), reason="sklearn output differs on Python 3.8"
-								)
+								sys.version_info[:2] == (3, 8),
+								reason="sklearn output differs on Python 3.8",
+								),
 						),
-				]
+				],
 		)
 @pytest.mark.usefixtures("py_version")
 def test_graphviz_export(

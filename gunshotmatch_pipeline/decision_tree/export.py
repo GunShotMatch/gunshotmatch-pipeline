@@ -101,7 +101,7 @@ def serialise_decision_tree(model: DecisionTreeClassifier) -> Dict[str, Any]:
 			"n_features_in_": model.n_features_in_,
 			"n_outputs_": model.n_outputs_,
 			"tree_": tree,
-			"params": model.get_params()
+			"params": model.get_params(),
 			}
 
 	if hasattr(model, "feature_names_in_"):
@@ -164,7 +164,7 @@ def serialise_random_forest(model: RandomForestClassifier) -> Dict[str, Any]:
 			"n_outputs_": model.n_outputs_,
 			"classes_": model.classes_.tolist(),
 			"estimators_": [serialise_decision_tree(decision_tree) for decision_tree in model.estimators_],
-			"params": model.get_params()
+			"params": model.get_params(),
 			}
 
 	if hasattr(model, "oob_score_"):
@@ -251,7 +251,8 @@ def verify_saved_decision_tree(
 	assert a.min_samples_leaf == b.min_samples_leaf, (a.min_samples_leaf, b.min_samples_leaf)
 	assert a.min_samples_split == b.min_samples_split, (a.min_samples_split, b.min_samples_split)
 	assert a.min_weight_fraction_leaf == b.min_weight_fraction_leaf, (
-			a.min_weight_fraction_leaf, b.min_weight_fraction_leaf
+			a.min_weight_fraction_leaf,
+			b.min_weight_fraction_leaf,
 			)
 	assert a.n_classes_ == b.n_classes_, (a.n_classes_, b.n_classes_)
 	assert a.n_features_in_ == b.n_features_in_, (a.n_features_in_, b.n_features_in_)
@@ -291,7 +292,8 @@ def verify_saved_random_forest(
 	assert a.min_samples_leaf == b.min_samples_leaf, (a.min_samples_leaf, b.min_samples_leaf)
 	assert a.min_samples_split == b.min_samples_split, (a.min_samples_split, b.min_samples_split)
 	assert a.min_weight_fraction_leaf == b.min_weight_fraction_leaf, (
-			a.min_weight_fraction_leaf, b.min_weight_fraction_leaf
+			a.min_weight_fraction_leaf,
+			b.min_weight_fraction_leaf,
 			)
 	assert a.n_classes_ == b.n_classes_, (a.n_classes_, b.n_classes_)
 	assert a.n_estimators == b.n_estimators, (a.n_estimators, b.n_estimators)

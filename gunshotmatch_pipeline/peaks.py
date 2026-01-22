@@ -60,7 +60,7 @@ def prepare_peak_list(
 					im,
 					points=method.peak_detection.points,
 					scans=method.peak_detection.scans,
-					)
+					),
 			)
 	print(" Peak list before filtering:", peak_list)
 
