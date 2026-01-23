@@ -1,14 +1,9 @@
-# stdlib
-from collections import defaultdict
-from typing import Dict
-
 # 3rd party
 from domdf_python_tools.paths import PathPlus
 
 # this package
 import gunshotmatch_pipeline.results
-from gunshotmatch_pipeline.projects import Projects, process_projects
-from gunshotmatch_pipeline.results import compounds, matches
+from gunshotmatch_pipeline.projects import Projects
 from gunshotmatch_pipeline.utils import project_plural
 
 root_dir = PathPlus(__file__).parent.abspath()
@@ -39,5 +34,6 @@ decision_tree_compound_norm_data = _machine_learning_data(projects, normalize=Tr
 
 (decision_tree_data_dir / "compounds_for_decision_tree.json").dump_json(decision_tree_compound_data, indent=2)
 (decision_tree_data_dir / "compounds_for_decision_tree_norm.json").dump_json(
-		decision_tree_compound_norm_data, indent=2
+		decision_tree_compound_norm_data,
+		indent=2,
 		)
